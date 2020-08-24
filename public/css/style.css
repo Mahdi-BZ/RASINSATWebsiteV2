@@ -1,5 +1,7 @@
+/* HEADER */
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body a:hover {
@@ -16,10 +18,12 @@ body a:hover {
 }
 
 .site-header a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 13px;
 }
+
+/* FOOTER */
 
 .site-footer {
   background-color: rgba(17, 17, 17);
@@ -28,11 +32,12 @@ body a:hover {
 }
 
 .site-footer a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
 
 .site-footer p {
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #eee;
@@ -41,6 +46,7 @@ body a:hover {
 }
 
 .site-footer h4 {
+  font-family: "Open Sans", sans-serif;
   margin: 20px 0 5px 0;
   color: white;
 }
@@ -49,6 +55,8 @@ body a:hover {
   text-align: center;
   margin-top: 90px;
 }
+
+/* HOME */
 
 .projects {
   padding-top: 30px;
@@ -60,7 +68,14 @@ body a:hover {
 }
 
 .projects h2 {
+  font-family: "Open Sans", sans-serif;
   color: #111;
+}
+
+.projects h2,
+.international h2,
+.national h2 {
+  font-family: "Open Sans", sans-serif;
   font-size: 32px;
   font-weight: 700;
 }
@@ -70,4 +85,93 @@ body a:hover {
   width: 65px;
   border-bottom: 2px solid #e3074a;
   margin-bottom: 60px;
+}
+
+/* ABOUT US */
+
+.international:before,
+.national:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.international::before {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.national:before {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.international {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 50px;
+  color: #000;
+
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../imgs/world-map.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  /*background-size: cover;*/
+}
+
+.international p,
+.national p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6rem;
+}
+
+.international .container,
+.national .container {
+  position: relative;
+  z-index: 10;
+}
+
+.national {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 90px;
+  color: #000;
+
+  background-image: url("../imgs/tn2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*background-size: cover;*/
+}
+
+.international h4,
+.national h4 {
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+.custom-header span {
+  position: relative;
+}
+
+.custom-header span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.custom-header span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.custom-header span:before,
+.container span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1000px;
+  display: block;
+  background-color: #000;
+  height: 1px;
 }
