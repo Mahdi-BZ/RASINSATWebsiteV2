@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="site-footer">
       <div className="ui container">
-        <div className="ui four column inverted divided grid center aligned ">
+        <div className="ui three column inverted  grid center aligned ">
           <div className="row ">
             <div className="column">
               <h3>IEEE RAS</h3>
@@ -16,7 +16,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="column">
-              <div className="ui fluid vertical inverted secondary menu">
+              <div className="ui fluid vertical devided inverted secondary menu">
                 <h3>USEFUL LINKS</h3>
                 <Link to="/" className="item">
                   Home
@@ -40,9 +40,8 @@ const Footer = () => {
             </div>
             <div className="column">
               <h3>CONTACT US</h3>
-              <div className="ui huge relaxed animated list">
+              <div className="ui huge relaxed list">
                 <div className="item">
-                  <i className="middle aligned marker icon"></i>
                   <div className="content">
                     <p>
                       {" "}
@@ -54,14 +53,14 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="item">
-                  <i className=" phone icon middle aligned"></i>
                   <div className="content">
+                    <h6>Phone:</h6>
                     <p>58 945 105</p>
                   </div>
                 </div>
                 <div className="item">
-                  <i className="mail icon"></i>
                   <div className="content">
+                    <h6>Email:</h6>
                     <p>amine.feki.10@ieee.org</p>
                   </div>
                 </div>
@@ -90,7 +89,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="column">
+            {/* <div className="column">
               <h3>MAP</h3>
               <iframe
                 title="google maps"
@@ -102,7 +101,7 @@ const Footer = () => {
                 aria-hidden="false"
                 tabIndex="0"
               ></iframe>
-            </div>
+  </div>*/}
           </div>
         </div>
         <p className="copyright">© 2020,IEEE RAS INSAT. All Rights Reserved</p>

@@ -15,12 +15,18 @@ body a:hover {
   position: fixed;
   z-index: 9999;
   width: 100%;
+  transition: 0.5s;
+}
+
+.site-header.scrolled {
+  height: 70px;
+  padding: 15px 0px;
 }
 
 .site-header a {
   font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 13px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 /* FOOTER */
@@ -45,15 +51,49 @@ body a:hover {
   margin-bottom: 10px;
 }
 
-.site-footer h4 {
-  font-family: "Open Sans", sans-serif;
+.site-footer h3 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
   margin: 20px 0 5px 0;
   color: white;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.site-footer h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #555;
+  height: 2px;
+}
+
+.site-footer h3::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 30px);
+  bottom: 0;
+  width: 60px;
+  background-color: #e3074a;
+  height: 2px;
 }
 
 .copyright {
   text-align: center;
   margin-top: 90px;
+}
+
+.site-footer .ui.secondary.inverted.menu a.item:hover {
+  color: #e3074a !important;
+}
+
+.site-footer .ui.inverted.link.list a.item:hover i {
+  color: #e3074a !important;
 }
 
 /* HOME */
