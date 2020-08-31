@@ -30,8 +30,7 @@ const Home = () => {
       <div className="projects">
         <div className="ui container">
           <div className="ui vertical segment center aligned">
-            <h2>Projects</h2>
-            <hr className="personal-divider" />
+            <h2 className="section-header">Projects</h2>
             <div className="ui link centered cards">
               <div className=" card">
                 <div className="image">

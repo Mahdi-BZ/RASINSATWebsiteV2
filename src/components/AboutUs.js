@@ -2,11 +2,10 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="about-us">
       <div className="international">
         <div className="ui container center aligned">
-          <h2>International</h2>
-          <hr className="personal-divider" />
+          <h2 className="section-header">International</h2>
           <div className="ui two column grid centered">
             <div className="row">
               <div className=" five wide column">
@@ -47,8 +46,7 @@ const AboutUs = () => {
       </div>
       <div className="national">
         <div className="ui container center aligned">
-          <h2>National</h2>
-          <hr className="personal-divider" />
+          <h2 className="section-header">National</h2>
           <div className="ui two column grid centered">
             <div className="row">
               <div className="six wide column">
