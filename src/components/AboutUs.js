@@ -6,7 +6,7 @@ const AboutUs = () => {
       <div className="international">
         <div className="ui container center aligned">
           <h2 className="section-header">International</h2>
-          <div className="ui two column grid centered">
+          <div className="ui two column stackable grid centered">
             <div className="row">
               <div className=" five wide column">
                 <h4 className="custom-header">
@@ -47,7 +47,7 @@ const AboutUs = () => {
       <div className="national">
         <div className="ui container center aligned">
           <h2 className="section-header">National</h2>
-          <div className="ui two column grid centered">
+          <div className="ui two column stackable grid centered">
             <div className="row">
               <div className="six wide column">
                 <h4 className="custom-header">

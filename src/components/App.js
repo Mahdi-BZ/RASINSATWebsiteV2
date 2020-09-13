@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import history from "../history";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
@@ -9,18 +9,26 @@ import Projects from "./Projects";
 import Header from "./Header";
 import Footer from "./Footer";
 import Community from "./Community";
+import Activity from "./Activity";
+import NotFound from "./NotFound";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   return (
     <Router history={history}>
       <div>
         <Header />
-        <Route path="/" exact component={Home} />
-        <Route path="/aboutus" exact component={AboutUs} />
-        <Route path="/awards" exact component={Awards} />
-        <Route path="/projects" exact component={Projects} />
-        <Route path="/activities" exact component={Activities} />
-        <Route path="/community" exact component={Community} />
+        <ScrollToTop />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/aboutus" exact component={AboutUs} />
+          <Route path="/awards" exact component={Awards} />
+          <Route path="/projects" exact component={Projects} />
+          <Route path="/activities" exact component={Activities} />
+          <Route path="/community" exact component={Community} />
+          <Route path="/activities/:id" exact component={Activity} />
+          <Route path="*" exact component={NotFound} />
+        </Switch>
         <Footer />
       </div>
     </Router>

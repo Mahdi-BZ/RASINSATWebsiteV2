@@ -41,7 +41,7 @@ const Awards = () => {
         <img
           alt={value.name}
           className="award-img"
-          src={`imgs/${value.imgURL}`}
+          src={`${process.env.PUBLIC_URL}/imgs/${value.imgURL}`}
         />
       </VerticalTimelineElement>
     );

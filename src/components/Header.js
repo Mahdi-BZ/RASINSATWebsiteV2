@@ -7,9 +7,12 @@ const Header = () => {
       <div className="ui container">
         <div className="ui secondary menu inverted">
           <div className="image">
-            <img src="./imgs/RAS-logo-white.png" alt="RAS INSAT Logo" />
+            <img
+              src={`${process.env.PUBLIC_URL}/imgs/RAS-logo-white.png`}
+              alt="RAS INSAT Logo"
+            />
           </div>
-          <div className="menu right">
+          <div className=" menu right">
             <NavLink exact to="/" className="item">
               Home
             </NavLink>

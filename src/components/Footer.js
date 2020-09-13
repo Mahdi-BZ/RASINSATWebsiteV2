@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="site-footer">
       <div className="ui container">
-        <div className="ui three column inverted  grid center aligned ">
+        <div className="ui three column inverted stackable grid center aligned ">
           <div className="row ">
             <div className="column">
               <h3>IEEE RAS</h3>
@@ -27,11 +27,11 @@ const Footer = () => {
                 <Link to="/awards" className="item">
                   Awards
                 </Link>
-                <Link to="/competitions" className="item">
-                  Competitions
-                </Link>
                 <Link to="/activities" className="item">
                   Activities
+                </Link>
+                <Link to="/projects" className="item">
+                  Projects
                 </Link>
                 <Link to="/community" className="item">
                   Our Community
