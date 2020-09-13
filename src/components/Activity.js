@@ -5,14 +5,14 @@ const Activity = () => {
   //let { id } = useParams();
 
   const imgs = [
-    "ult2019-1.webp",
-    "ult2019-2.webp",
-    "ult2019-3.webp",
-    "ult2019-4.webp",
-    "ult2019-5.webp",
-    "ult2019-6.webp",
-    "ult2019-7.webp",
-    "ult2019-8.webp",
+    "ULT2019-1.webp",
+    "ULT2019-2.webp",
+    "ULT2019-3.webp",
+    "ULT2019-4.webp",
+    "ULT2019-5.webp",
+    "ULT2019-6.webp",
+    "ULT2019-7.webp",
+    "ULT2019-8.webp",
   ];
 
   const renderedImgs = imgs.map((img, index) => {
@@ -20,7 +20,7 @@ const Activity = () => {
       <div className="column" key={index}>
         <div className="ui segment">
           <img
-            src={`${process.env.PUBLIC_URL}/imgs/activities/ult2019/${img}`}
+            src={`${process.env.PUBLIC_URL}/imgs/activities/ULT2019/${img}`}
             alt="test"
           />
         </div>
@@ -73,7 +73,7 @@ const Activity = () => {
         </p>
 
         <h4 className="sub-header">Photos</h4>
-        <div className="ui two column grid">{renderedImgs}</div>
+        <div className="ui two column stackable grid">{renderedImgs}</div>
       </div>
     </div>
   );

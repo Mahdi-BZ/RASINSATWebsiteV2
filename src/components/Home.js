@@ -79,9 +79,9 @@ const Home = () => {
         </div>
         <div className="extra content">
           <div className="ui link horizontal list">
-            {proj.links.map((link) => {
+            {proj.links.map((link, index) => {
               return (
-                <a href={link.url} target="blank" className="item">
+                <a key={index} href={link.url} target="blank" className="item">
                   <i className={`big ${link.name} icon`} />
                 </a>
               );

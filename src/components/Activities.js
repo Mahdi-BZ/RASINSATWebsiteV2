@@ -8,7 +8,7 @@ const Activities = () => {
       <div className=" card" key={i}>
         <div className="image">
           <img
-            src={`${process.env.PUBLIC_URL}/imgs/activities/ult2019/ult2019-1.webp`}
+            src={`${process.env.PUBLIC_URL}/imgs/activities/ULT2019/ULT2019-1.webp`}
             alt="thumbnail"
           />
         </div>
