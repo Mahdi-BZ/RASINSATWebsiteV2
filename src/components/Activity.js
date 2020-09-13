@@ -45,7 +45,7 @@ const Activity = () => {
           </a>
         </div>
         <img
-          src={`${process.env.PUBLIC_URL}/imgs/activities/ult2019/ult2019-1.webp`}
+          src={`${process.env.PUBLIC_URL}/imgs/activities/ULT2019/ULT2019-1.webp`}
           alt="test"
           className="main-img"
         />
