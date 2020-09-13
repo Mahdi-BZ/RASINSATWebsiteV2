@@ -1,6 +1,6 @@
 import React from "react";
 
-const Community = () => {
+const Projects = () => {
   return (
     <div className="underconstruction">
       <h2>Page Under Construction</h2>
@@ -8,4 +8,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default Projects;

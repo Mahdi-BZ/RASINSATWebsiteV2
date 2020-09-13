@@ -19,11 +19,11 @@ const Header = () => {
             <NavLink exact to="/awards" className="item">
               Awards
             </NavLink>
-            <NavLink exact to="/competitions" className="item">
-              Competitions
-            </NavLink>
             <NavLink exact to="/activities" className="item">
               Activities
+            </NavLink>
+            <NavLink exact to="/projects" className="item">
+              Projects
             </NavLink>
             <NavLink exact to="/community" className="item">
               Our Community

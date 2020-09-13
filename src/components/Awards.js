@@ -5,7 +5,48 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+const imgs = [
+  {
+    date: 2018,
+    name: "Outstanding Student Chapter in Tunisia",
+    imgURL: "Award2018-1.webp",
+  },
+  {
+    date: 2018,
+    name: "Runner-UP EASC Acceleration Program 2018 with NRW",
+    imgURL: "Award2018-2.webp",
+  },
+  {
+    date: 2017,
+    name: "Best RAS Student Chapter Award",
+    imgURL: "Award2017-1.webp",
+  },
+];
+
 const Awards = () => {
+  var rendredImgs = imgs.map((value, index) => {
+    return (
+      <VerticalTimelineElement
+        key={index}
+        className="vertical-timeline-element--education"
+        date={value.date}
+        iconStyle={{
+          background: "#e3074a",
+          color: "#000",
+        }}
+        icon={<i className=" inverted big trophy icon " />}
+      >
+        <h3 className="vertical-timeline-element-title">{value.name}</h3>
+
+        <img
+          alt={value.name}
+          className="award-img"
+          src={`imgs/${value.imgURL}`}
+        />
+      </VerticalTimelineElement>
+    );
+  });
+
   return (
     <div className="awards">
       <div className="ui container">
@@ -16,52 +57,7 @@ const Awards = () => {
           <br /> In recognition of our continuous efforts, we have received many
           awards. Here is a list of the most recent ones:
         </p>
-        <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2018"
-            iconStyle={{
-              background: "#e3074a",
-              color: "#000",
-            }}
-            icon={<i className=" inverted big trophy icon " />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Outstanding Student Chapter in Tunisia
-            </h3>
-
-            <img className="award-img" src="imgs/Award2018-1.webp" />
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2018"
-            iconStyle={{
-              background: "#e3074a",
-              color: "#000",
-            }}
-            icon={<i className=" inverted big trophy icon " />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Runner-UP EASC Acceleration Program 2018 with NRW
-            </h3>
-
-            <img className="award-img" src="imgs/Award2018-2.webp" />
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2017"
-            iconStyle={{
-              background: "#e3074a",
-              color: "#000",
-            }}
-            icon={<i className=" inverted big trophy icon " />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Best RAS Student Chapter Award
-            </h3>
-            <img className="award-img" src="imgs/Award2017-1.webp" />
-          </VerticalTimelineElement>
-        </VerticalTimeline>
+        <VerticalTimeline>{rendredImgs}</VerticalTimeline>
       </div>
     </div>
   );

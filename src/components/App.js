@@ -4,11 +4,11 @@ import history from "../history";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
 import Awards from "./Awards";
-import Competitions from "./Competitions";
 import Activities from "./Activities";
-import Community from "./Community";
+import Projects from "./Projects";
 import Header from "./Header";
 import Footer from "./Footer";
+import Community from "./Community";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/" exact component={Home} />
         <Route path="/aboutus" exact component={AboutUs} />
         <Route path="/awards" exact component={Awards} />
-        <Route path="/competitions" exact component={Competitions} />
+        <Route path="/projects" exact component={Projects} />
         <Route path="/activities" exact component={Activities} />
         <Route path="/community" exact component={Community} />
         <Footer />

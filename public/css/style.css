@@ -245,3 +245,19 @@ body a:hover {
 .vertical-timeline-element-title {
   text-align: center;
 }
+
+/*        ACTIVITIES         */
+
+/*        COMMUNITY         */
+
+.underconstruction {
+  height: 600px;
+  position: relative;
+}
+
+.underconstruction h2 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  text-align: center;
+}
