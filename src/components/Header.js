@@ -12,7 +12,8 @@ const Header = () => {
               alt="RAS INSAT Logo"
             />
           </div>
-          <div className=" menu right">
+
+          <div className="ui inverted menu right">
             <NavLink exact to="/" className="item">
               Home
             </NavLink>
@@ -33,6 +34,9 @@ const Header = () => {
             </NavLink>
           </div>
         </div>
+      </div>
+      <div className="ui massive icon toggle button">
+        <i className="inverted sidebar icon right floated"></i>
       </div>
     </div>
   );

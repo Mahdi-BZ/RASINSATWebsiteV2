@@ -93,13 +93,13 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <div className="pusher">
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {renderedItems}
       </Carousel>
 
-      <div className="projects">
-        <div className="ui container">
+      <div className="projects ">
+        <div className="ui container ">
           <div className="ui vertical segment center aligned">
             <h2 className="section-header">Projects</h2>
             <div className="ui link centered cards">{renderedProj}</div>
