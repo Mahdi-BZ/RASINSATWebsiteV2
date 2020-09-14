@@ -17,7 +17,7 @@ import ResponsiveNavBar from "./ResponsiveNavBar";
 const App = () => {
   return (
     <Router history={history}>
-      <div>
+      <div className="content">
         <Header />
         <ResponsiveNavBar />
         <ScrollToTop />

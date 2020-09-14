@@ -5,22 +5,22 @@ const ResponsiveNavBar = () => {
   return (
     <div className="responsive-nav">
       <NavLink exact to="/">
-        Home
+        <span> Home</span>
       </NavLink>
       <NavLink exact to="/aboutus">
-        About Us
+        <span>About Us</span>
       </NavLink>
       <NavLink exact to="/awards">
-        Awards
+        <span>Awards</span>
       </NavLink>
       <NavLink exact to="/activities">
-        Activities
+        <span>Activities</span>
       </NavLink>
       <NavLink exact to="/projects">
-        Projects
+        <span>Projects</span>
       </NavLink>
       <NavLink exact to="/community">
-        Our Community
+        <span>Our Community</span>
       </NavLink>
     </div>
   );

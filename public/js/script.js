@@ -4,9 +4,11 @@ $(window).on("scroll", function () {
   if (scrollTop > 90) {
     $(".site-header").addClass("scrolled");
     $(".responsive-nav").addClass("scrolled");
+    $(".carousel-inner").addClass("scrolled");
   } else {
     $(".site-header").removeClass("scrolled");
     $(".responsive-nav").removeClass("scrolled");
+    $(".carousel-inner").removeClass("scrolled");
   }
 });
 
@@ -25,9 +27,7 @@ $(() => {
   $(".button.icon").on("click", (e) => {
     $(".responsive-nav").toggleClass("active");
   });
-  $("body").on("click", (e) => {
-    if (test(e) && $(".responsive-nav").hasClass("active")) {
-      $(".responsive-nav").removeClass("active");
-    }
+  $(".responsive-nav a").on("click", () => {
+    $(".responsive-nav").removeClass("active");
   });
 });

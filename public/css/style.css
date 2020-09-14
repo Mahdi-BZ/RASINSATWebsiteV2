@@ -9,13 +9,16 @@ body a:hover {
 /* HEADER */
 
 .site-header {
-  background-color: rgba(18, 33, 71, 0.8);
+  background-color: rgba(18, 33, 71, 1);
   height: 90px;
   padding: 25px 0px;
   position: fixed;
   z-index: 9999;
   width: 100%;
   transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
 
 .site-header.scrolled {
@@ -25,6 +28,9 @@ body a:hover {
 
 .sidebar.menu {
   transition: 0.5s !important;
+  -moz-transition: 0.5s !important;
+  -o-transition: 0.5s !important;
+  -webkit-transition: 0.5s !important;
 }
 
 .sidebar.menu.scrolled {
@@ -62,23 +68,27 @@ body a:hover {
 .responsive-nav {
   position: fixed;
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   right: 0;
   top: 0;
   margin-top: 90px;
   height: 100%;
-  background-color: rgba(18, 33, 71, 0.8);
-  width: 260px;
+  background-color: rgba(18, 33, 71, 1);
+  width: 100%;
   z-index: 500;
-  transform: translateX(100%);
-  transition: transform 0.35s linear, margin 0.5s;
 }
 
 .responsive-nav a {
-  display: block;
-  padding: 15px 0;
-  text-align: center;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 15px;
+  font-size: 25px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -107,12 +117,70 @@ body a:hover {
     display: none !important;
   }
 
-  .responsive-nav {
-    display: block;
+  .responsive-nav.active {
+    display: flex;
   }
 
-  .responsive-nav.active {
-    transform: translateX(0);
+  .responsive-nav.active a span {
+    animation: fadein 1s;
+    -webkit-animation: fadein 1s;
+    -o-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -50px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -30px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -30px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -30px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -30px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
   }
 }
 
@@ -184,6 +252,15 @@ body a:hover {
 }
 
 /* HOME */
+
+.carousel-inner {
+  padding-top: 90px !important;
+  transition: 0.5s;
+}
+
+.carousel-inner.scrolled {
+  padding-top: 70px !important;
+}
 
 .projects {
   padding-top: 30px;

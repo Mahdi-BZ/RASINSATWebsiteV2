@@ -16,7 +16,11 @@ const Home = () => {
   var renderedItems = carouselItems.map((item, index) => {
     return (
       <Carousel.Item key={index}>
-        <img src={process.env.PUBLIC_URL + item.imgUrl} alt="Team 1" />
+        <img
+          src={process.env.PUBLIC_URL + item.imgUrl}
+          alt="Team 1"
+          style={{ width: "100%" }}
+        />
         <Carousel.Caption>
           <h3>{item.title}</h3>
           <p>{item.description}</p>
