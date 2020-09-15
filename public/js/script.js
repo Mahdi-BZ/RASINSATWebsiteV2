@@ -12,22 +12,22 @@ $(window).on("scroll", function () {
   }
 });
 
-//.sidebar("attach events", ".toggle.button")
-
-function test(e) {
-  return (
-    !$(e.target).parent().hasClass("responsive-nav") &&
-    !$(e.target).hasClass("responsive-nav") &&
-    !$(e.target).parent().hasClass("toggle") &&
-    !$(e.target).hasClass("toggle")
-  );
-}
-
 $(() => {
-  $(".button.icon").on("click", (e) => {
+  $(".button.icon").on("click", () => {
     $(".responsive-nav").toggleClass("active");
   });
+
   $(".responsive-nav a").on("click", () => {
     $(".responsive-nav").removeClass("active");
+  });
+
+  var activatedbutton = $(".community-button:first");
+
+  $(".community-button").on("click", (e) => {
+    if ($(e.target).is(activatedbutton)) return;
+
+    activatedbutton.removeClass("community-button-active");
+    $(e.target).addClass("community-button-active");
+    activatedbutton = $(e.target);
   });
 });

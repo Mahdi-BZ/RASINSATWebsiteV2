@@ -16,9 +16,9 @@ body a:hover {
   z-index: 9999;
   width: 100%;
   transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
 }
 
 .site-header.scrolled {
@@ -93,11 +93,11 @@ body a:hover {
 }
 
 .responsive-nav a.active {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .responsive-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
   color: #fff;
 }
 
@@ -121,66 +121,47 @@ body a:hover {
     display: flex;
   }
 
-  .responsive-nav.active a span {
-    animation: fadein 1s;
-    -webkit-animation: fadein 1s;
-    -o-animation: fadein 1s;
-    -moz-animation: fadein 1s;
+  .responsive-nav.active a.active {
+    animation: fadein 0.7s;
+    -webkit-animation: fadein 0.7s;
+    -o-animation: fadein 0.7s;
+    -moz-animation: fadein 0.7s;
   }
 }
 
 @keyframes fadein {
   from {
-    opacity: 0;
-    margin-left: -50px;
+    background-color: rgba(255, 255, 255, 0);
   }
   to {
-    opacity: 1;
-    margin-left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
 @-webkit-keyframes fadein {
   from {
-    opacity: 0;
-    margin-left: -30px;
+    background-color: rgba(255, 255, 255, 0);
   }
   to {
-    opacity: 1;
-    margin-left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
 @-moz-keyframes fadein {
   from {
-    opacity: 0;
-    margin-left: -30px;
+    background-color: rgba(255, 255, 255, 0);
   }
   to {
-    opacity: 1;
-    margin-left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
 @-o-keyframes fadein {
   from {
-    opacity: 0;
-    margin-left: -30px;
+    background-color: rgba(255, 255, 255, 0);
   }
   to {
-    opacity: 1;
-    margin-left: 0;
-  }
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-    margin-left: -30px;
-  }
-  to {
-    opacity: 1;
-    margin-left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -470,6 +451,58 @@ body a:hover {
 }
 
 /*        COMMUNITY         */
+
+.community {
+  padding: 150px 0 100px 0;
+}
+
+.community img {
+  width: 100%;
+  height: 100%;
+}
+
+.community .active {
+  animation: communityFadin 0.7s ease-in-out;
+}
+
+@keyframes communityFadin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.community-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 25px;
+  margin-bottom: 60px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  border-radius: 4px;
+  border: 0.5px solid #000;
+}
+
+.community-button-active,
+.community-button:hover {
+  color: #fff;
+  border-color: #e3074a;
+  background-color: #e3074a;
+}
+
+.community p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-bottom: 60px;
+}
 
 .underconstruction {
   height: 600px;
