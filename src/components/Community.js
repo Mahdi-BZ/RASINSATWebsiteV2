@@ -44,12 +44,13 @@ const Community = () => {
     return (
       <div className="active" key={index}>
         <p>{v.description}</p>
-        <div className="ui three column grid">
+        <div className="ui three column stackable grid">
           {v.imgs.map((img, index) => {
             return (
               <div className="column" key={index}>
                 <div className="ui segment">
                   <img
+                    className={`img${index}`}
                     src={`${process.env.PUBLIC_URL}/imgs/community/${img}`}
                     alt=""
                   />

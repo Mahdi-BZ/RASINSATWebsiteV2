@@ -105,6 +105,109 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <div className="team">
+        <div className="container center aligned">
+          <h2 className="section-header">Our Team</h2>
+          <div className="ui two column stackable grid">
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember1"
+                data-anim="bounce-1"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember2"
+                data-anim="bounce-2"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember3"
+                data-anim="bounce-1"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            <div className="column">
+              <img
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                className="hidden"
+                alt="teamMember4"
+                data-anim="bounce-2"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember5"
+                data-anim="bounce-1"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember6"
+                data-anim="bounce-2"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember7"
+                data-anim="bounce-1"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember8"
+                data-anim="bounce-2"
+              />
+              <div className="text">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

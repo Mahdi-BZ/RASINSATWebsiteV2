@@ -5,7 +5,7 @@ const Activities = () => {
   var renderedAct = [];
   for (let i = 0; i < 9; i++) {
     renderedAct.push(
-      <div className=" card" key={i}>
+      <div className="card" key={i}>
         <div className="image">
           <img
             src={`${process.env.PUBLIC_URL}/imgs/activities/ULT2019/ULT2019-1.webp`}

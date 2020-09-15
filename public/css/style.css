@@ -357,6 +357,144 @@ body a:hover {
   height: 1px;
 }
 
+.about-us .team {
+  padding-bottom: 90px;
+  padding-top: 50px;
+  background-color: #52364c;
+  color: #fff;
+}
+
+.about-us .team .bounce-1 {
+  visibility: visible;
+  animation: bouncein-1 0.7s ease-in-out;
+}
+
+.about-us .team .bounce-2 {
+  visibility: visible;
+  animation: bouncein-2 0.7s ease-in-out;
+}
+
+.about-us .team .text h6 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.about-us .team .text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d0674d;
+}
+
+.about-us .team .grid img {
+  width: 30%;
+}
+
+.about-us .team .grid .column {
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.about-us .team .grid .column:nth-child(even) img {
+  float: right;
+}
+
+.about-us .team .grid .column:nth-child(odd) img {
+  float: left;
+}
+
+@keyframes bouncein-1 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes bouncein-1 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-o-keyframes bouncein-1 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes bouncein-1 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bouncein-2 {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes bouncein-2 {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-o-keyframes bouncein-2 {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes bouncein-2 {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /*        AWARDS         */
 .awards {
   padding: 150px 0 100px 0;
@@ -396,6 +534,10 @@ body a:hover {
 
 .activities {
   padding: 150px 0 100px 0;
+}
+
+.activities .card {
+  animation: communityFadin 1s ease-in-out;
 }
 
 /*        ACITIVITY         */
@@ -468,9 +610,11 @@ body a:hover {
 @keyframes communityFadin {
   from {
     opacity: 0;
+    transform: scale(0.5);
   }
   to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
