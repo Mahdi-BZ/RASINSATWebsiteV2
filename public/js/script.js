@@ -24,10 +24,10 @@ $(() => {
   var activatedbutton = $(".community-button:first");
 
   $(".community-button").on("click", (e) => {
-    if ($(e.target).is(activatedbutton)) return;
-
-    activatedbutton.removeClass("community-button-active");
-    $(e.target).addClass("community-button-active");
-    activatedbutton = $(e.target);
+    if (!$(e.target).is(activatedbutton)) {
+      activatedbutton.removeClass("community-button-active");
+      $(e.target).addClass("community-button-active");
+      activatedbutton = $(e.target);
+    }
   });
 });
