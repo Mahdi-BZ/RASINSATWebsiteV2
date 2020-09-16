@@ -7,47 +7,47 @@ const AboutUs = () => {
     {
       name: "Ilef Mghirbi",
       jobDescription: "Vice Chairwoman",
-      imgURL: "ilef.png",
+      imgURL: "Ilef.png",
     },
     {
       name: "Imed Ben Slimene",
       jobDescription: "Training Manager",
-      imgURL: "imed.png",
+      imgURL: "Imed.png",
     },
     {
       name: "Yassine Chamkhi",
       jobDescription: "Media / Communication Manager",
-      imgURL: "yassine.png",
+      imgURL: "Yassine.png",
     },
     {
       name: "Achraf Trabelsi",
       jobDescription: "Treasurer & Sponsoring Manager",
-      imgURL: "achraf.png",
+      imgURL: "Achraf.png",
     },
     {
       name: "Zeineb Bennour",
       jobDescription: "General Secretary",
-      imgURL: "zeineb.png",
+      imgURL: "Zeineb.png",
     },
     {
       name: "Mouna Khiari",
       jobDescription: "Human Resources Manager",
-      imgURL: "mouna.png",
+      imgURL: "Mouna.png",
     },
     {
       name: "Mahdi Ben Zinouba",
       jobDescription: "Webmaster",
-      imgURL: "mahdi.png",
+      imgURL: "Mahdi.png",
     },
     {
       name: "Aziz Saidane",
       jobDescription: "Logistics Manager",
-      imgURL: "aziz.png",
+      imgURL: "Aziz.png",
     },
     {
       name: "Amine Feki",
       jobDescription: "Chairman",
-      imgURL: "feki.png",
+      imgURL: "Feki.png",
     },
   ];
 
