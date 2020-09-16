@@ -63,37 +63,43 @@ const Community = () => {
     );
   });
 
-  const [view, setView] = useState(renderedView[0]);
+  const [viewIndex, setViewIndex] = useState(0);
 
   return (
     <div className="community">
       <div className="ui container center aligned">
         <h2 className="section-header">Our Community</h2>
         <div
-          className="community-button community-button-active "
+          className={`community-button ${
+            viewIndex === 0 ? "community-button-active" : ""
+          }`}
           onClick={() => {
-            setView(renderedView[0]);
+            setViewIndex(0);
           }}
         >
           Members of the Week
         </div>
         <div
-          className="community-button "
+          className={`community-button ${
+            viewIndex === 1 ? "community-button-active" : ""
+          }`}
           onClick={() => {
-            setView(renderedView[1]);
+            setViewIndex(1);
           }}
         >
           RAS Familly Gallery
         </div>
         <div
-          className="community-button "
+          className={`community-button ${
+            viewIndex === 2 ? "community-button-active" : ""
+          }`}
           onClick={() => {
-            setView(renderedView[2]);
+            setViewIndex(2);
           }}
         >
           Team Building
         </div>
-        {view}
+        {renderedView[viewIndex]}
       </div>
     </div>
   );

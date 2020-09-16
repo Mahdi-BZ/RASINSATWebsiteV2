@@ -1,7 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 const Home = () => {
+  const myRef = useRef(null);
+
+  const handler = (e) => {
+    const scrollTop = e.currentTarget.scrollY;
+    if (scrollTop > 90) {
+      myRef.current.parentElement.classList.add("scrolled");
+    } else {
+      myRef.current.parentElement.classList.remove("scrolled");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handler);
+    return () => {
+      window.removeEventListener("scroll", handler);
+    };
+  });
+
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -15,7 +33,7 @@ const Home = () => {
 
   var renderedItems = carouselItems.map((item, index) => {
     return (
-      <Carousel.Item key={index}>
+      <Carousel.Item key={index} ref={myRef}>
         <img
           src={process.env.PUBLIC_URL + item.imgUrl}
           alt="Team 1"

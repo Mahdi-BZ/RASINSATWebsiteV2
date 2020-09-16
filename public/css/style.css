@@ -26,17 +26,6 @@ body a:hover {
   padding: 15px 0px;
 }
 
-.sidebar.menu {
-  transition: 0.5s !important;
-  -moz-transition: 0.5s !important;
-  -o-transition: 0.5s !important;
-  -webkit-transition: 0.5s !important;
-}
-
-.sidebar.menu.scrolled {
-  margin-top: 70px !important;
-}
-
 .site-header a {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -236,7 +225,7 @@ body a:hover {
 
 .carousel-inner {
   padding-top: 90px !important;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .carousel-inner.scrolled {
@@ -364,6 +353,10 @@ body a:hover {
   color: #fff;
 }
 
+.about-us .team .section-header::after {
+  background-color: #d0674d;
+}
+
 .about-us .team .bounce-1 {
   visibility: visible;
   animation: bouncein-1 0.7s ease-in-out;
@@ -372,6 +365,11 @@ body a:hover {
 .about-us .team .bounce-2 {
   visibility: visible;
   animation: bouncein-2 0.7s ease-in-out;
+}
+
+.about-us .team .text-bounce {
+  visibility: visible;
+  animation: text-bounce 0.7s ease-in-out;
 }
 
 .about-us .team .text h6 {
@@ -384,6 +382,7 @@ body a:hover {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 600;
+  text-transform: uppercase;
   color: #d0674d;
 }
 
@@ -391,7 +390,7 @@ body a:hover {
   width: 30%;
 }
 
-.about-us .team .grid .column {
+.about-us .team .grid .column .text {
   text-align: center;
 }
 
@@ -405,6 +404,10 @@ body a:hover {
 
 .about-us .team .grid .column:nth-child(odd) img {
   float: left;
+}
+
+.about-us .team .grid .column:last-child {
+  margin-right: -80px;
 }
 
 @keyframes bouncein-1 {
@@ -492,6 +495,62 @@ body a:hover {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes text-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes text-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes text-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes text-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -604,6 +663,11 @@ body a:hover {
 }
 
 .community .active {
+  height: 1100px;
+}
+
+.community .active .column,
+.community .active p {
   animation: communityFadin 0.7s ease-in-out;
 }
 

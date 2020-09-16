@@ -12,14 +12,12 @@ import Community from "./Community";
 import Activity from "./Activity";
 import NotFound from "./NotFound";
 import ScrollToTop from "./ScrollToTop";
-import ResponsiveNavBar from "./ResponsiveNavBar";
 
 const App = () => {
   return (
     <Router history={history}>
       <div className="content">
         <Header />
-        <ResponsiveNavBar />
         <ScrollToTop />
         <Switch>
           <Route path="/" exact component={Home} />

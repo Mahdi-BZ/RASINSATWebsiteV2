@@ -1,6 +1,116 @@
 import React from "react";
+import { useRef, useEffect } from "react";
+import { useIntersection } from "react-use";
 
 const AboutUs = () => {
+  const teamMembers = [
+    {
+      name: "Ilef Mghirbi",
+      jobDescription: "Vice Chairwoman",
+      imgURL: "ilef.png",
+    },
+    {
+      name: "Imed Ben Slimene",
+      jobDescription: "Training Manager",
+      imgURL: "imed.png",
+    },
+    {
+      name: "Yassine Chamkhi",
+      jobDescription: "Media / Communication Manager",
+      imgURL: "yassine.png",
+    },
+    {
+      name: "Achraf Trabelsi",
+      jobDescription: "Treasurer & Sponsoring Manager",
+      imgURL: "achraf.png",
+    },
+    {
+      name: "Zeineb Bennour",
+      jobDescription: "General Secretary",
+      imgURL: "zeineb.png",
+    },
+    {
+      name: "Mouna Khiari",
+      jobDescription: "Human Resources Manager",
+      imgURL: "mouna.png",
+    },
+    {
+      name: "Mahdi Ben Zinouba",
+      jobDescription: "Webmaster",
+      imgURL: "mahdi.png",
+    },
+    {
+      name: "Aziz Saidane",
+      jobDescription: "Logistics Manager",
+      imgURL: "aziz.png",
+    },
+    {
+      name: "Amine Feki",
+      jobDescription: "Chairman",
+      imgURL: "feki.png",
+    },
+  ];
+
+  const elRef = useRef([]);
+  const intersection = [];
+
+  const handler = () => {
+    elRef.current.forEach((el, i) => {
+      if (!el.classList.contains("shown") && isInViewport(el)) {
+        const el1 = el.children[0];
+        const el2 = el.children[1];
+        const anim = el1.getAttribute("data-anim");
+        el1.classList.remove("hidden");
+        el2.classList.remove("hidden");
+        el1.classList.add(anim);
+        el2.classList.add("text-bounce");
+        el.classList.add("shown");
+      }
+    });
+  };
+
+  const isInViewport = (element) => {
+    const rect = element.getBoundingClientRect();
+
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom - rect.height / 2 <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handler);
+    return () => {
+      window.removeEventListener("scroll", handler);
+    };
+  });
+
+  const renderedTeam = teamMembers.map((member, index) => {
+    return (
+      <div
+        className="column"
+        key={index}
+        ref={(el) => {
+          elRef.current[index] = el;
+        }}
+      >
+        <img
+          className="hidden"
+          src={`${process.env.PUBLIC_URL}/imgs/team/${member.imgURL}`}
+          alt="teamMember1"
+          data-anim={index % 2 ? "bounce-2" : "bounce-1"}
+        />
+        <div className="text hidden">
+          <h6>{member.name}</h6>
+          <p>{member.jobDescription}</p>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <div className="about-us">
       <div className="international">
@@ -108,19 +218,9 @@ const AboutUs = () => {
       <div className="team">
         <div className="container center aligned">
           <h2 className="section-header">Our Team</h2>
-          <div className="ui two column stackable grid">
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember1"
-                data-anim="bounce-1"
-              />
-              <div className="text">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
+          <div className="ui two column stackable centered grid">
+            {renderedTeam}
+            {/*
             <div className="column">
               <img
                 className="hidden"
@@ -128,7 +228,7 @@ const AboutUs = () => {
                 alt="teamMember2"
                 data-anim="bounce-2"
               />
-              <div className="text">
+              <div className="text hidden">
                 <h6>Mahdi Ben Zinouba</h6>
                 <p>WEBMASTER</p>
               </div>
@@ -140,7 +240,7 @@ const AboutUs = () => {
                 alt="teamMember3"
                 data-anim="bounce-1"
               />
-              <div className="text">
+              <div className="text hidden">
                 <h6>Mahdi Ben Zinouba</h6>
                 <p>WEBMASTER</p>
               </div>
@@ -152,7 +252,7 @@ const AboutUs = () => {
                 alt="teamMember4"
                 data-anim="bounce-2"
               />
-              <div className="text">
+              <div className="text hidden">
                 <h6>Mahdi Ben Zinouba</h6>
                 <p>WEBMASTER</p>
               </div>
@@ -164,7 +264,7 @@ const AboutUs = () => {
                 alt="teamMember5"
                 data-anim="bounce-1"
               />
-              <div className="text">
+              <div className="text hidden">
                 <h6>Mahdi Ben Zinouba</h6>
                 <p>WEBMASTER</p>
               </div>
@@ -176,7 +276,7 @@ const AboutUs = () => {
                 alt="teamMember6"
                 data-anim="bounce-2"
               />
-              <div className="text">
+              <div className="text hidden">
                 <h6>Mahdi Ben Zinouba</h6>
                 <p>WEBMASTER</p>
               </div>
@@ -188,7 +288,7 @@ const AboutUs = () => {
                 alt="teamMember7"
                 data-anim="bounce-1"
               />
-              <div className="text">
+              <div className="text hidden">
                 <h6>Mahdi Ben Zinouba</h6>
                 <p>WEBMASTER</p>
               </div>
@@ -200,11 +300,24 @@ const AboutUs = () => {
                 alt="teamMember8"
                 data-anim="bounce-2"
               />
-              <div className="text">
+              <div className="text hidden">
                 <h6>Mahdi Ben Zinouba</h6>
                 <p>WEBMASTER</p>
               </div>
             </div>
+            <div className="column">
+              <img
+                className="hidden"
+                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
+                alt="teamMember8"
+                data-anim="bounce-1"
+              />
+              <div className="text hidden">
+                <h6>Mahdi Ben Zinouba</h6>
+                <p>WEBMASTER</p>
+              </div>
+            </div>
+            */}
           </div>
         </div>
       </div>
