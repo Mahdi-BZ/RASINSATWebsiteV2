@@ -1,6 +1,5 @@
 import React from "react";
 import { useRef, useEffect } from "react";
-import { useIntersection } from "react-use";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -52,39 +51,37 @@ const AboutUs = () => {
   ];
 
   const elRef = useRef([]);
-  const intersection = [];
 
-  const handler = () => {
-    elRef.current.forEach((el, i) => {
-      if (!el.classList.contains("shown") && isInViewport(el)) {
-        const el1 = el.children[0];
-        const el2 = el.children[1];
-        const anim = el1.getAttribute("data-anim");
-        el1.classList.remove("hidden");
-        el2.classList.remove("hidden");
-        el1.classList.add(anim);
-        el2.classList.add("text-bounce");
-        el.classList.add("shown");
-      }
-    });
-  };
-
-  const isInViewport = (element) => {
-    const rect = element.getBoundingClientRect();
-
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom - rect.height / 2 <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const elParent = entry.target;
+          const el1 = elParent.children[0];
+          const el2 = elParent.children[1];
+          const anim = el1.getAttribute("data-anim");
+          el1.classList.remove("hide");
+          el2.classList.remove("hide");
+          el1.classList.add(anim);
+          el2.classList.add("text-bounce");
+        }
+      });
+    },
+    {
+      threshold: 0.7,
+    }
+  );
 
   useEffect(() => {
-    window.addEventListener("scroll", handler);
+    const ref = elRef.current;
+
+    ref.forEach((el) => {
+      observer.observe(el);
+    });
     return () => {
-      window.removeEventListener("scroll", handler);
+      ref.forEach((el) => {
+        observer.unobserve(el);
+      });
     };
   });
 
@@ -98,12 +95,12 @@ const AboutUs = () => {
         }}
       >
         <img
-          className="hidden"
+          className="hide"
           src={`${process.env.PUBLIC_URL}/imgs/team/${member.imgURL}`}
           alt="teamMember1"
           data-anim={index % 2 ? "bounce-2" : "bounce-1"}
         />
-        <div className="text hidden">
+        <div className="hide text">
           <h6>{member.name}</h6>
           <p>{member.jobDescription}</p>
         </div>

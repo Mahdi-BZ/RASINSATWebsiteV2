@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { InView } from "react-intersection-observer";
 import Carousel from "react-bootstrap/Carousel";
 
 const Home = () => {
@@ -47,72 +49,62 @@ const Home = () => {
     );
   });
 
-  const projects = [
+  const latestActivities = [
     {
-      title: "Neghlbouh",
-      description: `“Neghlbouh” is a project that can help our country in his fight against “Covid-19” Virus. This project is a mobile application with a containment bracelet. The mobile application helps in avoiding the horizontal transmission by informing people about the crowded places and stores people movements to facilitate the targeted test. The bracelet is dedicated for people who are obliged to respect the quarantine. This project is with collaboration with IEEE CS INSAT SBC and IEEE IAS INSAT SBC.`,
-      imgURL: "/imgs/neghlbouh.webp",
-      links: [
-        { name: "facebook", url: "https://www.facebook.com/INSAT.RAS/" },
-        { name: "instagram", url: "https://www.instagram.com/ieee_ras_insat" },
-        {
-          name: "linkedin",
-          url: "https://www.linkedin.com/company/ieee-insat-ras",
-        },
-      ],
+      id: 0,
+      name: "ULT Robots 4.0",
+      date: 2019,
+      description: `This year we have participated in ULT Robots 4.0 also.`,
+      imgURL: "ULT2019/ULT2019-1.webp",
     },
     {
-      title: "Neghlbouh",
-      description: `“Neghlbouh” is a project that can help our country in his fight against “Covid-19” Virus. This project is a mobile application with a containment bracelet. The mobile application helps in avoiding the horizontal transmission by informing people about the crowded places and stores people movements to facilitate the targeted test. The bracelet is dedicated for people who are obliged to respect the quarantine. This project is with collaboration with IEEE CS INSAT SBC and IEEE IAS INSAT SBC.`,
-      imgURL: "/imgs/neghlbouh.webp",
-      links: [
-        { name: "facebook", url: "https://www.facebook.com/INSAT.RAS/" },
-        { name: "instagram", url: "https://www.instagram.com/ieee_ras_insat" },
-        {
-          name: "linkedin",
-          url: "https://www.linkedin.com/company/ieee-insat-ras",
-        },
-      ],
+      id: 0,
+      name: "ULT Robots 4.0",
+      date: 2019,
+      description: `This year we have participated in ULT Robots 4.0 also.`,
+      imgURL: "ULT2019/ULT2019-1.webp",
     },
     {
-      title: "Neghlbouh",
-      description: `“Neghlbouh” is a project that can help our country in his fight against “Covid-19” Virus. This project is a mobile application with a containment bracelet. The mobile application helps in avoiding the horizontal transmission by informing people about the crowded places and stores people movements to facilitate the targeted test. The bracelet is dedicated for people who are obliged to respect the quarantine. This project is with collaboration with IEEE CS INSAT SBC and IEEE IAS INSAT SBC.`,
-      imgURL: "/imgs/neghlbouh.webp",
-      links: [
-        { name: "facebook", url: "https://www.facebook.com/INSAT.RAS/" },
-        { name: "instagram", url: "https://www.instagram.com/ieee_ras_insat" },
-        {
-          name: "linkedin",
-          url: "https://www.linkedin.com/company/ieee-insat-ras",
-        },
-      ],
+      id: 0,
+      name: "ULT Robots 4.0",
+      date: 2019,
+      description: `This year we have participated in ULT Robots 4.0 also.`,
+      imgURL: "ULT2019/ULT2019-1.webp",
     },
   ];
 
-  var renderedProj = projects.map((proj, index) => {
+  var renderedProj = latestActivities.map((act, index) => {
     return (
-      <div className=" card" key={index}>
+      <div className="card" key={index}>
         <div className="image">
-          <img src="imgs/neghlbouh.webp" alt="neghlbouh" />
+          <img
+            src={`${process.env.PUBLIC_URL}/imgs/activities/${act.imgURL}`}
+            alt="thumbnail"
+          />
         </div>
         <div className="content">
-          <div className="header">{proj.title}</div>
-          <div className="description">{proj.description}</div>
+          <div className="header">{act.name}</div>
+          <div className="meta">{act.date}</div>
+          <div className="description">{act.description}</div>
         </div>
-        <div className="extra content">
-          <div className="ui link horizontal list">
-            {proj.links.map((link, index) => {
-              return (
-                <a key={index} href={link.url} target="blank" className="item">
-                  <i className={`big ${link.name} icon`} />
-                </a>
-              );
-            })}
-          </div>
+        <div className="extra content center aligned">
+          <Link to={`activities/${act.id}`}>
+            <div className="ui animated button">
+              <div className="visible content">See More</div>
+              <div className="hidden content">
+                <i className="right arrow icon"></i>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     );
   });
+
+  const animationHandler = (el) => {
+    el.classList.remove("hide");
+    el.classList.add(el.getAttribute("data-anim"));
+  };
 
   return (
     <div className="pusher">
@@ -122,10 +114,160 @@ const Home = () => {
 
       <div className="projects ">
         <div className="ui container ">
-          <div className="ui vertical segment center aligned">
-            <h2 className="section-header">Projects</h2>
+          <div className="ui vertical segment ">
+            <h2 className="section-header">Lastest Activities</h2>
             <div className="ui link centered cards">{renderedProj}</div>
           </div>
+        </div>
+      </div>
+
+      <div className="sponsors">
+        <div className="ui container">
+          <h2 className="section-header">Our Sponsors</h2>
+          <div className="ui stackable five column grid">
+            <div className="column">
+              <InView
+                as="img"
+                threshold={0.5}
+                onChange={(inView, entry) => {
+                  if (inView) {
+                    animationHandler(entry.target);
+                  }
+                }}
+                src={`${process.env.PUBLIC_URL}/imgs/sponsors/BT.webp`}
+                alt="BT"
+                className="hide"
+                data-anim="bounce-1"
+              ></InView>
+            </div>
+            <div className="column">
+              <InView
+                as="img"
+                threshold={0.5}
+                onChange={(inView, entry) => {
+                  if (inView) {
+                    animationHandler(entry.target);
+                  }
+                }}
+                src={`${process.env.PUBLIC_URL}/imgs/sponsors/polulu.webp`}
+                alt="polulu"
+                className="hide"
+                data-anim="bounce-up"
+              ></InView>
+            </div>
+            <div className="column">
+              <InView
+                as="img"
+                threshold={0.5}
+                onChange={(inView, entry) => {
+                  if (inView) {
+                    animationHandler(entry.target);
+                  }
+                }}
+                src={`${process.env.PUBLIC_URL}/imgs/sponsors/sakly.webp`}
+                alt="sakly"
+                className="hide"
+                data-anim="bounce-down"
+              ></InView>
+            </div>
+            <div className="column">
+              <InView
+                as="img"
+                threshold={0.5}
+                onChange={(inView, entry) => {
+                  if (inView) {
+                    animationHandler(entry.target);
+                  }
+                }}
+                src={`${process.env.PUBLIC_URL}/imgs/sponsors/smiths_interconnect.webp`}
+                className="hide"
+                alt="smiths interconnect"
+                data-anim="bounce-up"
+              ></InView>
+            </div>
+            <div className="column">
+              <InView
+                as="img"
+                onChange={(inView, entry) => {
+                  if (inView) {
+                    animationHandler(entry.target);
+                  }
+                }}
+                src={`${process.env.PUBLIC_URL}/imgs/sponsors/SEB.webp`}
+                alt="SEB"
+                className="hide"
+                data-anim="bounce-2"
+              ></InView>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="contact-us">
+        <div className="ui container">
+          <h2 className="section-header">Contact Us</h2>
+          <form className="ui form">
+            <InView
+              onChange={(inView, entry) => {
+                if (inView) {
+                  animationHandler(entry.target);
+                }
+              }}
+              className="required field hide"
+              data-anim="bounce-1"
+            >
+              <label>First Name :</label>
+              <input type="text" name="firstName" placeholder="First Name" />
+            </InView>
+            <InView
+              onChange={(inView, entry) => {
+                if (inView) {
+                  animationHandler(entry.target);
+                }
+              }}
+              className="required field hide"
+              data-anim="bounce-2"
+            >
+              <label>Last Name :</label>
+              <input type="text" name="lastName" placeholder="Last Name" />
+            </InView>
+            <InView
+              onChange={(inView, entry) => {
+                if (inView) {
+                  animationHandler(entry.target);
+                }
+              }}
+              className="required field hide"
+              data-anim="bounce-1"
+            >
+              <label>Email :</label>
+              <input type="email" name="email" placeholder="Email" />
+            </InView>
+            <InView
+              onChange={(inView, entry) => {
+                if (inView) {
+                  animationHandler(entry.target);
+                }
+              }}
+              className="required field hide"
+              data-anim="bounce-2"
+            >
+              <label>Message :</label>
+              <textarea name="message" rows="5"></textarea>
+            </InView>
+            <InView
+              as="button"
+              onChange={(inView, entry) => {
+                if (inView) {
+                  animationHandler(entry.target);
+                }
+              }}
+              className="ui button hide"
+              data-anim="bounce-1"
+            >
+              Submit
+            </InView>
+          </form>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import history from "../history";
 import Home from "./Home";
@@ -12,7 +12,6 @@ import Community from "./Community";
 import Activity from "./Activity";
 import NotFound from "./NotFound";
 import ScrollToTop from "./ScrollToTop";
-
 const App = () => {
   return (
     <Router history={history}>
