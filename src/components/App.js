@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import history from "../history";
 import Home from "./Home";
@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/aboutus" exact component={AboutUs} />
           <Route path="/awards" exact component={Awards} />
           <Route path="/projects" exact component={Projects} />
+          <Route path="/projects/:id" exact component={Activity} />
           <Route path="/activities" exact component={Activities} />
           <Route path="/community" exact component={Community} />
           <Route path="/activities/:id" exact component={Activity} />

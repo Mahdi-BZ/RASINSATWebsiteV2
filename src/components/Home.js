@@ -1,27 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { InView } from "react-intersection-observer";
 import Carousel from "react-bootstrap/Carousel";
+import latestActivities from "../json/latestActivities";
 
 const Home = () => {
-  const myRef = useRef(null);
-
-  const handler = (e) => {
-    const scrollTop = e.currentTarget.scrollY;
-    if (scrollTop > 90) {
-      myRef.current.parentElement.classList.add("scrolled");
-    } else {
-      myRef.current.parentElement.classList.remove("scrolled");
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handler);
-    return () => {
-      window.removeEventListener("scroll", handler);
-    };
-  });
-
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -29,19 +12,27 @@ const Home = () => {
   };
 
   const carouselItems = [
-    { title: "Test", description: "epsum sulum", imgUrl: "/imgs/team.webp" },
-    { title: "Test", description: "epsum sulum", imgUrl: "/imgs/team.webp" },
+    {
+      title: "IEEE RAS Chapter - INSAT Student Branch",
+      description: "",
+      imgUrl: "/imgs/team.webp",
+    },
+    {
+      title: "“Our ambitions exceed Elon Musk's”",
+      description: "",
+      imgUrl: "/imgs/team.webp",
+    },
   ];
 
   var renderedItems = carouselItems.map((item, index) => {
     return (
-      <Carousel.Item key={index} ref={myRef}>
+      <Carousel.Item key={index}>
         <img
           src={process.env.PUBLIC_URL + item.imgUrl}
           alt="Team 1"
           style={{ width: "100%" }}
         />
-        <Carousel.Caption>
+        <Carousel.Caption bsPrefix="carousal-slider-caption">
           <h3>{item.title}</h3>
           <p>{item.description}</p>
         </Carousel.Caption>
@@ -49,31 +40,7 @@ const Home = () => {
     );
   });
 
-  const latestActivities = [
-    {
-      id: 0,
-      name: "ULT Robots 4.0",
-      date: 2019,
-      description: `This year we have participated in ULT Robots 4.0 also.`,
-      imgURL: "ULT2019/ULT2019-1.webp",
-    },
-    {
-      id: 0,
-      name: "ULT Robots 4.0",
-      date: 2019,
-      description: `This year we have participated in ULT Robots 4.0 also.`,
-      imgURL: "ULT2019/ULT2019-1.webp",
-    },
-    {
-      id: 0,
-      name: "ULT Robots 4.0",
-      date: 2019,
-      description: `This year we have participated in ULT Robots 4.0 also.`,
-      imgURL: "ULT2019/ULT2019-1.webp",
-    },
-  ];
-
-  var renderedProj = latestActivities.map((act, index) => {
+  var renderedAct = latestActivities.map((act, index) => {
     return (
       <div className="card" key={index}>
         <div className="image">
@@ -107,16 +74,16 @@ const Home = () => {
   };
 
   return (
-    <div className="pusher">
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+    <div className="home">
+      <Carousel activeIndex={index} onSelect={handleSelect} fade={true}>
         {renderedItems}
       </Carousel>
 
-      <div className="projects ">
+      <div className="latest-activities ">
         <div className="ui container ">
           <div className="ui vertical segment ">
             <h2 className="section-header">Lastest Activities</h2>
-            <div className="ui link centered cards">{renderedProj}</div>
+            <div className="ui link centered cards">{renderedAct}</div>
           </div>
         </div>
       </div>

@@ -228,16 +228,45 @@ body a:hover {
 /* HOME */
 
 .carousel-inner {
-  padding-top: 90px !important;
-  transition: 0.5s ease-in-out;
-}
-
-.carousel-inner.scrolled {
   padding-top: 70px !important;
 }
 
-.projects {
-  padding-top: 30px;
+.carousel-item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.carousal-slider-caption {
+  position: absolute;
+  display: block;
+  top: 30%;
+  right: 15%;
+  left: 15%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+}
+
+.carousal-slider-caption h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.carousal-slider-caption p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+}
+
+.home .latest-activities {
+  padding-top: 50px;
   padding-bottom: 70px;
 }
 
@@ -245,7 +274,7 @@ body a:hover {
   background-color: #c13584;
 }
 
-.projects h2 {
+.home .latest-activities h2 {
   font-family: "Open Sans", sans-serif;
   color: #111;
 }
@@ -268,6 +297,29 @@ body a:hover {
   width: 65px;
   height: 2px;
   background-color: #e3074a;
+}
+.sponsors {
+  padding-bottom: 100px;
+}
+
+.sponsors .grid .column {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors .grid img {
+  width: 100%;
+}
+
+.contact-us {
+  padding-bottom: 100px;
+}
+
+.contact-us form {
+  width: 50%;
+  margin: 0 auto;
 }
 
 /* ABOUT US */
@@ -754,28 +806,52 @@ body a:hover {
   text-align: center;
 }
 
-/*        SPONSORS         */
-.sponsors {
-  padding-bottom: 100px;
+/*        PROJECTS         */
+
+.projects {
+  padding: 150px 0 100px 0;
 }
 
-.sponsors .grid .column {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.sponsors .grid img {
+.projects .custom-card img {
   width: 100%;
 }
 
-/*        SPONSORS         */
-.contact-us {
-  padding-bottom: 100px;
+.projects .custom-card {
+  margin: 0 15%;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  column-gap: 10px;
+  background-color: #f1f1f1;
+  margin-bottom: 30px;
+  height: 253px;
 }
 
-.contact-us form {
-  width: 50%;
-  margin: 0 auto;
+.projects .custom-card h3 {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 15px;
+}
+
+.projects .custom-card p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.projects .custom-card > div {
+  padding: 15px;
+}
+
+.projects .custom-card:nth-child(odd) {
+  grid-template-columns: 4fr 2fr;
+}
+
+.projects .custom-card:nth-child(odd) img {
+  order: 2;
+}
+
+@media (max-width: 700px) {
+  .projects .custom-card {
+    display: block;
+    height: 100%;
+  }
 }

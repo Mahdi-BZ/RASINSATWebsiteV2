@@ -1,26 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import activities from "../json/activities";
 
 const Activities = () => {
-  var renderedAct = [];
-  for (let i = 0; i < 9; i++) {
-    renderedAct.push(
-      <div className="card" key={i}>
+  const renderedAct = activities.map((act, index) => {
+    return (
+      <div className="card" key={index}>
         <div className="image">
           <img
-            src={`${process.env.PUBLIC_URL}/imgs/activities/ULT2019/ULT2019-1.webp`}
+            src={`${process.env.PUBLIC_URL}/imgs/activities/${act.mainImgURL}`}
             alt="thumbnail"
           />
         </div>
         <div className="content">
-          <div className="header">ULT Robots 4.0</div>
-          <div className="meta">2019</div>
-          <div className="description">
-            This year we have participated in ULT Robots 4.0 also.
-          </div>
+          <div className="header">{act.title}</div>
+          <div className="meta">{act.date}</div>
+          <div className="description">{act.description}</div>
         </div>
         <div className="extra content center aligned">
-          <Link to={`activities/${i}`}>
+          <Link to={`activities/${act.id}`}>
             <div className="ui animated button">
               <div className="visible content">See More</div>
               <div className="hidden content">
@@ -31,7 +29,7 @@ const Activities = () => {
         </div>
       </div>
     );
-  }
+  });
 
   return (
     <div className="activities">

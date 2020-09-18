@@ -26,10 +26,13 @@ const Header = () => {
       <div className="ui container">
         <div className="ui secondary menu inverted">
           <div className="image">
-            <img
-              src={`${process.env.PUBLIC_URL}/imgs/RAS-logo-white.png`}
-              alt="RAS INSAT Logo"
-            />
+            <NavLink exact to="/">
+              {" "}
+              <img
+                src={`${process.env.PUBLIC_URL}/imgs/RAS-logo-white.png`}
+                alt="RAS INSAT Logo"
+              />{" "}
+            </NavLink>
           </div>
 
           <div className="ui inverted menu right">
