@@ -13,8 +13,8 @@ const Home = () => {
 
   const carouselItems = [
     {
-      title: "IEEE RAS Chapter - INSAT Student Branch",
-      description: "",
+      title: "IEEE RAS INSAT Student Branch Chapter ",
+      description: "Robotics and Automation Society",
       imgUrl: "/imgs/team.webp",
     },
     {
@@ -219,6 +219,18 @@ const Home = () => {
               className="required field hide"
               data-anim="bounce-2"
             >
+              <label>Subject :</label>
+              <input type="text" name="subject" placeholder="Subject" />
+            </InView>
+            <InView
+              onChange={(inView, entry) => {
+                if (inView) {
+                  animationHandler(entry.target);
+                }
+              }}
+              className="required field hide"
+              data-anim="bounce-1"
+            >
               <label>Message :</label>
               <textarea name="message" rows="5"></textarea>
             </InView>
@@ -230,7 +242,7 @@ const Home = () => {
                 }
               }}
               className="ui button hide"
-              data-anim="bounce-1"
+              data-anim="bounce-2"
             >
               Submit
             </InView>

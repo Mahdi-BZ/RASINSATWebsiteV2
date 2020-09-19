@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="column">
               <h3>IEEE RAS</h3>
               <p>
-                when we talk about IEEE we'll be talking about : Success,
+                when we talk about RAS we'll be talking about : Success,
                 hardwork dedication, awards, passion, sacrifice, teamwork, and
                 endless love.
               </p>
@@ -54,13 +54,17 @@ const Footer = () => {
                 </div>
                 <div className="item">
                   <div className="content">
-                    <h6>Phone:</h6>
-                    <p>58 945 105</p>
+                    <h6>
+                      <i className="ui phone icon"></i>
+                    </h6>
+                    <p>+216 58 945 105</p>
                   </div>
                 </div>
                 <div className="item">
                   <div className="content">
-                    <h6>Email:</h6>
+                    <h6>
+                      <i className="ui mail icon"></i>
+                    </h6>
                     <p>amine.feki.10@ieee.org</p>
                   </div>
                 </div>

@@ -189,10 +189,24 @@ body a:hover {
   margin: 20px 0 5px 0;
   color: white;
   padding-bottom: 12px;
+  padding-top: 12px;
   margin-bottom: 25px;
 }
 
-.site-footer h3::before {
+.site-footer .column:first-child > h3 {
+  text-align: left;
+  border-left: 3px solid #e3074a;
+  font-size: 30px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 14px;
+}
+
+.site-footer .column:first-child > p {
+  text-align: left;
+}
+
+.site-footer .column:not(:first-child) h3::before {
   content: "";
   position: absolute;
   left: 0;
@@ -202,7 +216,7 @@ body a:hover {
   height: 2px;
 }
 
-.site-footer h3::after {
+.site-footer .column:not(:first-child) h3::after {
   content: "";
   position: absolute;
   left: calc(50% - 30px);
@@ -254,14 +268,13 @@ body a:hover {
 }
 
 .carousal-slider-caption h3 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  font-weight: 600;
   margin-bottom: 30px;
 }
 
 .carousal-slider-caption p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
 }
 
