@@ -1,26 +1,31 @@
 import React, { useState } from "react";
+import { Bounce, Fade } from "react-awesome-reveal";
 import community from "../json/community";
 
 const Community = () => {
   var renderedView = community.map((v, index) => {
     return (
-      <div className="active" key={index}>
-        <p>{v.description}</p>
-        <div className="ui three column stackable grid">
-          {v.imgs.map((img, index) => {
-            return (
-              <div className="column" key={index}>
-                <div className="ui segment">
-                  <img
-                    className={`img${index}`}
-                    src={`${process.env.PUBLIC_URL}/imgs/community/${img}`}
-                    alt=""
-                  />
+      <div key={index}>
+        <Bounce triggerOnce={true}>
+          <p>{v.description}</p>
+        </Bounce>
+        <Fade triggerOnce={true}>
+          <div className="ui three column stackable grid">
+            {v.imgs.map((img, index) => {
+              return (
+                <div className="column" key={index}>
+                  <div className="ui segment">
+                    <img
+                      className={`img${index}`}
+                      src={`${process.env.PUBLIC_URL}/imgs/community/${img}`}
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </Fade>
       </div>
     );
   });

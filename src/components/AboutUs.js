@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { Bounce, Fade } from "react-awesome-reveal";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -50,60 +50,20 @@ const AboutUs = () => {
     },
   ];
 
-  const elRef = useRef([]);
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const elParent = entry.target;
-          const el1 = elParent.children[0];
-          const el2 = elParent.children[1];
-          const anim = el1.getAttribute("data-anim");
-          el1.classList.remove("hide");
-          el2.classList.remove("hide");
-          el1.classList.add(anim);
-          el2.classList.add("text-bounce");
-        }
-      });
-    },
-    {
-      threshold: 0.7,
-    }
-  );
-
-  useEffect(() => {
-    const ref = elRef.current;
-
-    ref.forEach((el) => {
-      observer.observe(el);
-    });
-    return () => {
-      ref.forEach((el) => {
-        observer.unobserve(el);
-      });
-    };
-  });
-
   const renderedTeam = teamMembers.map((member, index) => {
     return (
-      <div
-        className="column"
-        key={index}
-        ref={(el) => {
-          elRef.current[index] = el;
-        }}
-      >
-        <img
-          className="hide"
-          src={`${process.env.PUBLIC_URL}/imgs/team/${member.imgURL}`}
-          alt="teamMember1"
-          data-anim={index % 2 ? "bounce-2" : "bounce-1"}
-        />
-        <div className="hide text">
+      <div className="column" key={index}>
+        <Fade triggerOnce={true} direction={index % 2 ? "right" : "left"}>
+          <img
+            className=""
+            src={`${process.env.PUBLIC_URL}/imgs/team/${member.imgURL}`}
+            alt={`teamMember${index + 1}`}
+          />
+        </Fade>
+        <Bounce className="text" triggerOnce={true}>
           <h6>{member.name}</h6>
           <p>{member.jobDescription}</p>
-        </div>
+        </Bounce>
       </div>
     );
   });

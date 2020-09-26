@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { InView } from "react-intersection-observer";
+import { Fade } from "react-awesome-reveal";
 import Carousel from "react-bootstrap/Carousel";
 import latestActivities from "../json/latestActivities";
+import { useForm } from "react-hook-form";
+import * as emailjs from "emailjs-com";
 
 const Home = () => {
   const [index, setIndex] = useState(0);
+
+  const { register, handleSubmit, reset, errors } = useForm();
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -68,9 +72,22 @@ const Home = () => {
     );
   });
 
-  const animationHandler = (el) => {
-    el.classList.remove("hide");
-    el.classList.add(el.getAttribute("data-anim"));
+  const onsubmit = (data) => {
+    let templateParams = {
+      from_name: data.firstName + " " + data.lastName,
+      user_email: data.email,
+      subject: data.subject,
+      message: data.message,
+    };
+
+    emailjs.send(
+      "service_u5jt4ss",
+      "template_tlzgpjy",
+      templateParams,
+      "user_q8e4FXE0st9dPWaw6e4l3"
+    );
+
+    reset();
   };
 
   return (
@@ -93,78 +110,49 @@ const Home = () => {
           <h2 className="section-header">Our Sponsors</h2>
           <div className="ui stackable five column grid">
             <div className="column">
-              <InView
-                as="img"
-                threshold={0.5}
-                onChange={(inView, entry) => {
-                  if (inView) {
-                    animationHandler(entry.target);
-                  }
-                }}
-                src={`${process.env.PUBLIC_URL}/imgs/sponsors/BT.webp`}
-                alt="BT"
-                className="hide"
-                data-anim="bounce-1"
-              ></InView>
+              <Fade direction="left" triggerOnce={true}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/imgs/sponsors/BT.webp`}
+                  alt="BT"
+                  className=""
+                />
+              </Fade>
             </div>
             <div className="column">
-              <InView
-                as="img"
-                threshold={0.5}
-                onChange={(inView, entry) => {
-                  if (inView) {
-                    animationHandler(entry.target);
-                  }
-                }}
-                src={`${process.env.PUBLIC_URL}/imgs/sponsors/polulu.webp`}
-                alt="polulu"
-                className="hide"
-                data-anim="bounce-up"
-              ></InView>
+              <Fade direction="up" triggerOnce={true}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/imgs/sponsors/polulu.webp`}
+                  alt="polulu"
+                  className=""
+                />
+              </Fade>
             </div>
             <div className="column">
-              <InView
-                as="img"
-                threshold={0.5}
-                onChange={(inView, entry) => {
-                  if (inView) {
-                    animationHandler(entry.target);
-                  }
-                }}
-                src={`${process.env.PUBLIC_URL}/imgs/sponsors/sakly.webp`}
-                alt="sakly"
-                className="hide"
-                data-anim="bounce-down"
-              ></InView>
+              <Fade direction="down" triggerOnce={true}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/imgs/sponsors/sakly.webp`}
+                  alt="sakly"
+                  className=""
+                />
+              </Fade>
             </div>
             <div className="column">
-              <InView
-                as="img"
-                threshold={0.5}
-                onChange={(inView, entry) => {
-                  if (inView) {
-                    animationHandler(entry.target);
-                  }
-                }}
-                src={`${process.env.PUBLIC_URL}/imgs/sponsors/smiths_interconnect.webp`}
-                className="hide"
-                alt="smiths interconnect"
-                data-anim="bounce-up"
-              ></InView>
+              <Fade direction="up" triggerOnce={true}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/imgs/sponsors/smiths_interconnect.webp`}
+                  className=""
+                  alt="smiths interconnect"
+                />
+              </Fade>
             </div>
             <div className="column">
-              <InView
-                as="img"
-                onChange={(inView, entry) => {
-                  if (inView) {
-                    animationHandler(entry.target);
-                  }
-                }}
-                src={`${process.env.PUBLIC_URL}/imgs/sponsors/SEB.webp`}
-                alt="SEB"
-                className="hide"
-                data-anim="bounce-2"
-              ></InView>
+              <Fade direction="right" triggerOnce={true}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/imgs/sponsors/SEB.webp`}
+                  alt="SEB"
+                  className=""
+                />
+              </Fade>
             </div>
           </div>
         </div>
@@ -173,79 +161,93 @@ const Home = () => {
       <div className="contact-us">
         <div className="ui container">
           <h2 className="section-header">Contact Us</h2>
-          <form className="ui form">
-            <InView
-              onChange={(inView, entry) => {
-                if (inView) {
-                  animationHandler(entry.target);
-                }
-              }}
-              className="required field hide"
-              data-anim="bounce-1"
+          <form className="ui form" onSubmit={handleSubmit(onsubmit)}>
+            <Fade
+              direction="right"
+              className="required field "
+              triggerOnce={true}
             >
               <label>First Name :</label>
-              <input type="text" name="firstName" placeholder="First Name" />
-            </InView>
-            <InView
-              onChange={(inView, entry) => {
-                if (inView) {
-                  animationHandler(entry.target);
-                }
-              }}
-              className="required field hide"
-              data-anim="bounce-2"
+              <input
+                type="text"
+                ref={register({
+                  required: <p className="error">First Name is required</p>,
+                })}
+                name="firstName"
+                placeholder="First Name"
+              />
+            </Fade>
+            {errors.firstName && errors.firstName.message}
+            <Fade
+              direction="left"
+              className="required field "
+              triggerOnce={true}
             >
               <label>Last Name :</label>
-              <input type="text" name="lastName" placeholder="Last Name" />
-            </InView>
-            <InView
-              onChange={(inView, entry) => {
-                if (inView) {
-                  animationHandler(entry.target);
-                }
-              }}
-              className="required field hide"
-              data-anim="bounce-1"
+              <input
+                type="text"
+                ref={register({
+                  required: <p className="error">Last Name is required</p>,
+                })}
+                name="lastName"
+                placeholder="Last Name"
+              />
+            </Fade>
+            {errors.lastName && errors.lastName.message}
+            <Fade
+              direction="right"
+              className="required field "
+              triggerOnce={true}
             >
               <label>Email :</label>
-              <input type="email" name="email" placeholder="Email" />
-            </InView>
-            <InView
-              onChange={(inView, entry) => {
-                if (inView) {
-                  animationHandler(entry.target);
-                }
-              }}
-              className="required field hide"
-              data-anim="bounce-2"
+              <input
+                type="email"
+                ref={register({
+                  required: <p className="error">Email is required</p>,
+                  validate: (value) =>
+                    /\S+@\S+\.\S+/.test(value) || (
+                      <p className="error">Invalid Email</p>
+                    ),
+                })}
+                name="email"
+                placeholder="Email"
+              />
+            </Fade>
+            {errors.email && errors.email.message}
+            <Fade
+              direction="left"
+              className="required field "
+              triggerOnce={true}
             >
               <label>Subject :</label>
-              <input type="text" name="subject" placeholder="Subject" />
-            </InView>
-            <InView
-              onChange={(inView, entry) => {
-                if (inView) {
-                  animationHandler(entry.target);
-                }
-              }}
-              className="required field hide"
-              data-anim="bounce-1"
+              <input
+                type="text"
+                ref={register({
+                  required: <p className="error">Subject is required</p>,
+                })}
+                name="subject"
+                placeholder="Subject"
+              />
+            </Fade>
+            {errors.subject && errors.subject.message}
+            <Fade
+              direction="right"
+              className="required field "
+              triggerOnce={true}
             >
               <label>Message :</label>
-              <textarea name="message" rows="5"></textarea>
-            </InView>
-            <InView
-              as="button"
-              onChange={(inView, entry) => {
-                if (inView) {
-                  animationHandler(entry.target);
-                }
-              }}
-              className="ui button hide"
-              data-anim="bounce-2"
-            >
-              Submit
-            </InView>
+              <textarea
+                name="message"
+                rows="5"
+                ref={register({
+                  required: <p className="error">Message is required</p>,
+                })}
+              ></textarea>
+            </Fade>
+            {errors.message && errors.message.message}
+            <Fade direction="left" triggerOnce={true}>
+              <div className="ui button ">Submit</div>
+            </Fade>
           </form>
         </div>
       </div>

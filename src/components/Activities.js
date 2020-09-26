@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import activities from "../json/activities";
 
@@ -35,9 +36,11 @@ const Activities = () => {
     <div className="activities">
       <div className="ui container">
         <h2 className="section-header">Our Activities</h2>
-        <div className="ui three stackable cards center aligned">
-          {renderedAct}
-        </div>
+        <Fade triggerOnce={true}>
+          <div className="ui three stackable cards center aligned">
+            {renderedAct}
+          </div>
+        </Fade>
       </div>
     </div>
   );
