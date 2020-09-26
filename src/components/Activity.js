@@ -3,10 +3,11 @@ import activities from "../json/activities";
 import { useParams } from "react-router-dom";
 
 const Activity = () => {
-  let { id } = useParams();
+  let { type, id } = useParams();
 
-  const act = activities[id];
-
+  const act = activities[type].find((a) => {
+    return a.id === parseInt(id);
+  });
   const renderedImgs = act.imgsURL.map((imgURL, index) => {
     return (
       <div className="column" key={index}>

@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/projects/:id" exact component={Activity} />
           <Route path="/activities" exact component={Activities} />
           <Route path="/community" exact component={Community} />
-          <Route path="/activities/:id" exact component={Activity} />
+          <Route path="/activities/:type/:id" exact component={Activity} />
           <Route path="*" exact component={NotFound} />
         </Switch>
         <Footer />

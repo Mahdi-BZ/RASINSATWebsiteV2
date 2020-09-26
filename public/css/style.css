@@ -918,6 +918,44 @@ body a:hover {
   animation: communityFadin 1s ease-in-out;
 }*/
 
+.sub-section {
+  font-family: "Open Sans", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 70px !important;
+  text-align: center;
+  margin-top: 70px !important;
+}
+
+.sub-section span {
+  position: relative;
+  transition: color 0.25s;
+  padding: 5px;
+}
+
+.sub-section span:hover {
+  color: #fff;
+}
+
+.sub-section span:before {
+  content: "";
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  transition: 0.25s;
+}
+
+.sub-section span:hover:before {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background-color: #e3074a;
+  border: 0;
+}
+
 /*        ACITIVITY         */
 
 .activity {
@@ -1098,5 +1136,14 @@ body a:hover {
   .projects .custom-card {
     display: block;
     height: 100%;
+  }
+
+  .carousal-slider-caption h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .carousal-slider-caption p {
+    font-size: 13px;
   }
 }

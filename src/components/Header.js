@@ -48,9 +48,7 @@ const Header = () => {
             <NavLink exact to="/activities" className="item">
               Activities
             </NavLink>
-            <NavLink exact to="/projects" className="item">
-              Projects
-            </NavLink>
+
             <NavLink exact to="/community" className="item">
               Our Community
             </NavLink>
@@ -106,15 +104,7 @@ const Header = () => {
         >
           <span>Activities</span>
         </NavLink>
-        <NavLink
-          exact
-          to="/projects"
-          onClick={() => {
-            setActive(false);
-          }}
-        >
-          <span>Projects</span>
-        </NavLink>
+
         <NavLink
           exact
           to="/community"
