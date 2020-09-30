@@ -275,14 +275,20 @@ body a:hover {
 }
 
 .carousal-slider-caption h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "oswald", sans-serif;
   font-size: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .carousal-slider-caption p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "oswald", sans-serif;
   font-size: 30px;
+}
+
+.carousal-slider-caption .moto {
+  font-family: "oswald", sans-serif;
+  font-size: 22px;
+  margin-top: 30px;
 }
 
 .home .latest-activities {
@@ -990,12 +996,12 @@ body a:hover {
   z-index: 600;
 }
 
-.activity .grid .column .segment {
+.activity .grid .column .segment, .community .grid .column .segment{
   z-index: 0;
   transition: 0.5s ease-in-out;
 }
 
-.activity .grid .column .segment:hover {
+.activity .grid .column .segment:hover, .community .grid .column .segment:hover{
   transform: scale(1.5);
   z-index: 10;
 }

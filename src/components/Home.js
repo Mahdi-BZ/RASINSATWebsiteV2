@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { /*useState */} from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import Carousel from "react-bootstrap/Carousel";
@@ -7,23 +7,19 @@ import { useForm } from "react-hook-form";
 import * as emailjs from "emailjs-com";
 
 const Home = () => {
-  const [index, setIndex] = useState(0);
+  //const [index, setIndex] = useState(0);
 
   const { register, handleSubmit, reset, errors } = useForm();
 
-  const handleSelect = (selectedIndex, e) => {
+  /*const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
-  };
+  }*/
 
   const carouselItems = [
     {
       title: "IEEE RAS INSAT Student Branch Chapter ",
       description: "Robotics and Automation Society",
-      imgUrl: "/imgs/team.webp",
-    },
-    {
-      title: "“Our ambitions exceed Elon Musk's”",
-      description: "",
+      moto: "“Our ambitions exceed Elon Musk's”",
       imgUrl: "/imgs/team.webp",
     },
   ];
@@ -39,6 +35,7 @@ const Home = () => {
         <Carousel.Caption bsPrefix="carousal-slider-caption">
           <h3>{item.title}</h3>
           <p>{item.description}</p>
+          <p className="moto">{item.moto}</p>
         </Carousel.Caption>
       </Carousel.Item>
     );
@@ -92,7 +89,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Carousel activeIndex={index} onSelect={handleSelect} fade={true}>
+      <Carousel indicators={false} controls={false} fade={true}>
         {renderedItems}
       </Carousel>
 

@@ -72,12 +72,32 @@ const Activities = () => {
         </Fade>
         <Bounce triggerOnce={true}>
           <h2 className="sub-section">
+            <span>Humanitarian</span>
+          </h2>
+        </Bounce>
+        <Fade triggerOnce={true}>
+          <div className="ui three stackable cards center aligned">
+            {renderedAct["humanitarian"]}
+          </div>
+        </Fade>
+        <Bounce triggerOnce={true}>
+          <h2 className="sub-section">
             <span>IEEE DAY</span>
           </h2>
         </Bounce>
         <Fade triggerOnce={true}>
           <div className="ui three stackable cards center aligned">
             {renderedAct["ieeeday"]}
+          </div>
+        </Fade>
+        <Bounce triggerOnce={true}>
+          <h2 className="sub-section">
+            <span>NRW</span>
+          </h2>
+        </Bounce>
+        <Fade triggerOnce={true}>
+          <div className="ui three stackable cards center aligned">
+            {renderedAct["nrw"]}
           </div>
         </Fade>
       </div>
