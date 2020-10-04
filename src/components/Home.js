@@ -1,4 +1,4 @@
-import React, { /*useState */} from "react";
+import React /*useState */ from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import Carousel from "react-bootstrap/Carousel";
@@ -89,7 +89,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Carousel indicators={false} controls={false} fade={true}>
+      <Carousel indicators={false} controls={false}>
         {renderedItems}
       </Carousel>
 
