@@ -87,20 +87,48 @@ export default {
         "Competition organized by “club robotique ENIM”",
       description:"",
       date: "February 2020",
-      mainImgURL: "FST2020/FST2020-1.webp",
+      mainImgURL: "ENIM2018/ENIM2018-4.webp",
       imgsURL: [
+        "ENIM2018/ENIM2018-4.webp",
         "ENIM2018/ENIM2018-1.webp",
         "ENIM2018/ENIM2018-2.webp",
         "ENIM2018/ENIM2018-3.webp",
+
       ],
     },
   ],
 
-  ieeeday: [
+  ieeeevents: [
+    {
+      id: 15,
+      title: "Summer School",
+      type: "ieeeevents",
+      miniDescription: "An educational event organized by IEEE INSAT SB where each chapter provides workshops related to their domain.",
+      description:
+    `For the 3rd edition of summer school IEEE RAS INSAT SBC organized two workshops:
+
+    -ARDUINO level 0: The Attendees discovered the arduino board and its components, then they learnt to program it in order to light up a LED. Finally, we challenged them to make a mini project on their own using the knowledge they learnt.
+
+    -Solidworks: The attendees discovered the software’s features and tools and made some basic 3D objects then they were guided to design a more complex model.`,
+      date: "September 2020",
+      mainImgURL: "SS2020/SS2020-9.webp",
+      imgsURL: [
+        "SS2020/SS2020-9.webp",
+        "SS2020/SS2020-1.webp",
+        "SS2020/SS2020-2.webp",
+        "SS2020/SS2020-3.webp",
+        "SS2020/SS2020-4.webp",
+        "SS2020/SS2020-5.webp",
+        "SS2020/SS2020-6.webp",
+        "SS2020/SS2020-7.webp",
+        "SS2020/SS2020-8.webp",
+        
+      ],
+    },
     {
       id: 3,
       title: "IEEE DAY 2019",
-      type: "ieeeday",
+      type: "ieeeevents",
       miniDescription: "IEEE day is the occasion where IEEE members from all around the world celebrate the first IEEE meeting back in 1884 to share technical news and projects.",
       description:
         "IEEE RAS INSAT SBC, along with all the IEEE INSAT SB chapters, celebrated this occasion on october 9th, 2019. We exhibited our past activities and achievements in a stand for our visitors , we entertained them with some educational games and they even got the chance to play a mini competition with guided robots.",
@@ -120,31 +148,6 @@ export default {
   ],
 
   workshop: [
-    {
-      id: 15,
-      title: "Summer School",
-      type: "workshop",
-      miniDescription: "An educational event organized by IEEE INSAT SB where each chapter provides workshops related to their domain.",
-      description:
-    `For the 3rd edition of summer school IEEE RAS INSAT SBC organized two workshops:
-
-    -ARDUINO level 0: The Attendees discovered the arduino board and its components, then they learnt to program it in order to light up a LED. Finally, we challenged them to make a mini project on their own using the knowledge they learnt.
-
-    -Solidworks: The attendees discovered the software’s features and tools and made some basic 3D objects then they were guided to design a more complex model.`,
-      date: "September 2020",
-      mainImgURL: "SS2020/SS2020-2.webp",
-      imgsURL: [
-        "SS2020/SS2020-1.webp",
-        "SS2020/SS2020-2.webp",
-        "SS2020/SS2020-3.webp",
-        "SS2020/SS2020-4.webp",
-        "SS2020/SS2020-5.webp",
-        "SS2020/SS2020-6.webp",
-        "SS2020/SS2020-7.webp",
-        "SS2020/SS2020-8.webp",
-        
-      ],
-    },
     {
       id: 4,
       title: "Arduino",
@@ -321,16 +324,15 @@ export default {
       description:
         "Unfortunately and due to the sanitary crisis the third NRW edition was cancelled, yet that won’t stop us from trying to provide our members and guests with other versions of the congress where they enjoy the amazing NRW experience all with taking the sanitary precautions into consideration.",
       date: "January 2018",
-      mainImgURL: "SPACEEXPO2018/SPACEEXPO2018-6.webp",
+      mainImgURL: "NRW3.0/NRW3.0-1.webp",
       imgsURL: [
-        "SPACEEXPO2018/SPACEEXPO2018-1.webp",
-        "SPACEEXPO2018/SPACEEXPO2018-2.webp",
-        "SPACEEXPO2018/SPACEEXPO2018-3.webp",
-        "SPACEEXPO2018/SPACEEXPO2018-4.webp",
-        "SPACEEXPO2018/SPACEEXPO2018-5.webp",
-        "SPACEEXPO2018/SPACEEXPO2018-6.webp",
-        "SPACEEXPO2018/SPACEEXPO2018-7.webp",
-        "SPACEEXPO2018/SPACEEXPO2018-8.webp",
+        "NRW3.0/NRW3.0-1.webp",
+        "NRW3.0/NRW3.0-2.webp",
+        "NRW3.0/NRW3.0-3.webp",
+        "NRW3.0/NRW3.0-4.webp",
+        "NRW3.0/NRW3.0-5.webp",
+        "NRW3.0/NRW3.0-6.webp",
+       
       ],
     },
   ],

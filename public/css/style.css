@@ -1036,6 +1036,7 @@ body a:hover {
   margin: 50px auto 60px auto;
   text-align: left;
   white-space: pre-line;
+  text-align: justify;
 }
 
 .activity .sub-header {

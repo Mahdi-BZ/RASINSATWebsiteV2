@@ -2,7 +2,7 @@ export default [
   {
     id: 15,
     title: "Summer School",
-    type: "workshop",
+    type: "ieeeevents",
     miniDescription: "An educational event organized by IEEE INSAT SB where each chapter provides workshops related to their domain.",
     description:
   `For the 3rd edition of summer school IEEE RAS INSAT SBC organized two workshops:

@@ -82,12 +82,12 @@ const Activities = () => {
         </Fade>
         <Bounce triggerOnce={true}>
           <h2 className="sub-section">
-            <span>IEEE DAY</span>
+            <span>IEEE Events</span>
           </h2>
         </Bounce>
         <Fade triggerOnce={true}>
           <div className="ui three stackable cards center aligned">
-            {renderedAct["ieeeday"]}
+            {renderedAct["ieeeevents"]}
           </div>
         </Fade>
         <Bounce triggerOnce={true}>
