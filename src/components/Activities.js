@@ -19,7 +19,7 @@ const Activities = () => {
             <div className="content">
               <div className="header">{act.title}</div>
               <div className="meta">{act.date}</div>
-              <div className="description">{act.description}</div>
+              <div className="description">{act.miniDescription}</div>
             </div>
             <div className="extra content center aligned">
               <Link to={`activities/${key}/${act.id}`}>

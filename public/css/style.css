@@ -348,6 +348,22 @@ body a:hover {
   margin: 0 auto;
 }
 
+.contact-us-success,
+.contact-us-failed {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+
+.contact-us-success {
+  color: #21ba45;
+}
+
+.contact-us-failed {
+  color: #db2828;
+}
+
 /* ABOUT US */
 
 .international:before,
@@ -996,12 +1012,14 @@ body a:hover {
   z-index: 600;
 }
 
-.activity .grid .column .segment, .community .grid .column .segment{
+.activity .grid .column .segment,
+.community .grid .column .segment {
   z-index: 0;
   transition: 0.5s ease-in-out;
 }
 
-.activity .grid .column .segment:hover, .community .grid .column .segment:hover{
+.activity .grid .column .segment:hover,
+.community .grid .column .segment:hover {
   transform: scale(1.5);
   z-index: 10;
 }
@@ -1017,6 +1035,7 @@ body a:hover {
   font-weight: 500;
   margin: 50px auto 60px auto;
   text-align: left;
+  white-space: pre-line;
 }
 
 .activity .sub-header {
@@ -1151,5 +1170,11 @@ body a:hover {
 
   .carousal-slider-caption p {
     font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .carousal-slider-caption .moto {
+    font-size: 12px;
+    margin-top: 10px;
   }
 }

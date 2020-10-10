@@ -1,4 +1,4 @@
-import React /*useState */ from "react";
+import React , {useState} from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import Carousel from "react-bootstrap/Carousel";
@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import * as emailjs from "emailjs-com";
 
 const Home = () => {
-  //const [index, setIndex] = useState(0);
+  const [formStatus, setFormStatus] = useState(null);
 
   const { register, handleSubmit, reset, errors } = useForm();
 
@@ -22,6 +22,7 @@ const Home = () => {
       moto: "“Our ambitions exceed Elon Musk's”",
       imgUrl: "/imgs/team.webp",
     },
+    
   ];
 
   var renderedItems = carouselItems.map((item, index) => {
@@ -46,17 +47,17 @@ const Home = () => {
       <div className="card" key={index}>
         <div className="image">
           <img
-            src={`${process.env.PUBLIC_URL}/imgs/activities/${act.imgURL}`}
+            src={`${process.env.PUBLIC_URL}/imgs/activities/${act.mainImgURL}`}
             alt="thumbnail"
           />
         </div>
         <div className="content">
           <div className="header">{act.name}</div>
           <div className="meta">{act.date}</div>
-          <div className="description">{act.description}</div>
+          <div className="description">{act.miniDescription}</div>
         </div>
         <div className="extra content center aligned">
-          <Link to={`activities/${act.id}`}>
+          <Link to={`activities/${act.type}/${act.id}`}>
             <div className="ui animated button">
               <div className="visible content">See More</div>
               <div className="hidden content">
@@ -69,20 +70,41 @@ const Home = () => {
     );
   });
 
-  const onsubmit = (data) => {
+  const formstat = () => {
+    if(!formStatus) return null;
+    
+    if(formStatus === "success") {
+      return <p className="contact-us-success">Thank you for contacting us</p>
+    }
+    else {
+      return <p className="contact-us-failed">Sorry something went wrong, Try again</p>
+    }
+
+  }
+
+  const onsubmit = async (data) => {
     let templateParams = {
       from_name: data.firstName + " " + data.lastName,
-      user_email: data.email,
+      sender_email: data.email,
       subject: data.subject,
       message: data.message,
     };
 
-    emailjs.send(
+    const response = await emailjs.send(
       "service_u5jt4ss",
       "template_tlzgpjy",
       templateParams,
       "user_q8e4FXE0st9dPWaw6e4l3"
-    );
+    )
+
+    if(response.status === 200)
+    {
+      setFormStatus("success");
+    }else {
+      setFormStatus("failed");
+    }
+
+    
 
     reset();
   };
@@ -243,8 +265,9 @@ const Home = () => {
             </Fade>
             {errors.message && errors.message.message}
             <Fade direction="left" triggerOnce={true}>
-              <div className="ui button ">Submit</div>
+              <button className="ui button ">Submit</button>
             </Fade>
+            {formstat()}
           </form>
         </div>
       </div>

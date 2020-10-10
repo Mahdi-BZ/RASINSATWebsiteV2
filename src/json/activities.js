@@ -2,10 +2,10 @@ export default {
   competition: [
     {
       id: 5,
-      title: "FST 2020",
+      title: "FST Robots 2020",
       type: "competition",
-      description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+      miniDescription: "fst robots is a competition organized by IEEE RAS FST SBC",
+      description: "Eager to learn more and to develop their skills, our robotics enthusiasts never skip the opportunity to participate in competitions. FST robots is no exception, our chapter partcipated with 4 line-follower robots and we were ranked 3rd and 4th.",
       date: "February 2020",
       mainImgURL: "FST2020/FST2020-1.webp",
       imgsURL: [
@@ -19,8 +19,8 @@ export default {
       id: 0,
       title: "ULT Robots 4.0",
       type: "competition",
-      description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+      miniDescription: "ULT-robots is a competition organized annually by megabot-ult",
+      description: "Our members are loyal participants in ULT-robots. For this edition we also took part of this important compettion and we partcipated with 4 line-floower robotss and one guided robot.",
       date: "December 2019",
       mainImgURL: "ULT2019/ULT2019-1.webp",
       imgsURL: [
@@ -39,8 +39,9 @@ export default {
       id: 2,
       title: "TUNIROBOTS 19",
       type: "competition",
+      miniDescription: "TUNIROBOTS, the first tunisian robotics competition organized by INSAT students.",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "TUNIROBOTS is one of the most important national competitions that we work on. It attracts qualified participants from all over the country, which makes it a rising challenge for us to take. Fortunately, determination and hard work always pay off, and one of our participating teams won the “Tunisian League for Robotics Champions” ",
       date: "April 2019",
       mainImgURL: "TR2019/TR2019-1.webp",
       imgsURL: [
@@ -61,8 +62,8 @@ export default {
       id: 1,
       title: "ENSI ROBOCUP",
       type: "competition",
-      description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+      miniDescription: "Participation in ENSI ROBOCUP organized annually by “Association robotique ENSI”",
+      description: "It is with joy that we participate each year in the robocup competition, the organization and the exciting atmosphere of robocup ENSI never fail to amaze us. For this edition, our 6 teams prepared 5 line-follower robots and one guided robot. Our efforts weren’t fruitless as we were awarded the first place in the spacelab competition.",
       date: "February 2020",
       mainImgURL: "ENSI2019/ENSI2019-1.webp",
       imgsURL: [
@@ -82,8 +83,9 @@ export default {
       id: 7,
       title: "ENIM ROBOTS",
       type: "competition",
-      description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+      miniDescription:
+        "Competition organized by “club robotique ENIM”",
+      description:"",
       date: "February 2020",
       mainImgURL: "FST2020/FST2020-1.webp",
       imgsURL: [
@@ -99,8 +101,9 @@ export default {
       id: 3,
       title: "IEEE DAY 2019",
       type: "ieeeday",
+      miniDescription: "IEEE day is the occasion where IEEE members from all around the world celebrate the first IEEE meeting back in 1884 to share technical news and projects.",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "IEEE RAS INSAT SBC, along with all the IEEE INSAT SB chapters, celebrated this occasion on october 9th, 2019. We exhibited our past activities and achievements in a stand for our visitors , we entertained them with some educational games and they even got the chance to play a mini competition with guided robots.",
       date: "October 2019",
       mainImgURL: "IEEEDAY2019/IEEEDAY2019-6.webp",
       imgsURL: [
@@ -118,11 +121,37 @@ export default {
 
   workshop: [
     {
+      id: 15,
+      title: "Summer School",
+      type: "workshop",
+      miniDescription: "An educational event organized by IEEE INSAT SB where each chapter provides workshops related to their domain.",
+      description:
+    `For the 3rd edition of summer school IEEE RAS INSAT SBC organized two workshops:
+
+    -ARDUINO level 0: The Attendees discovered the arduino board and its components, then they learnt to program it in order to light up a LED. Finally, we challenged them to make a mini project on their own using the knowledge they learnt.
+
+    -Solidworks: The attendees discovered the software’s features and tools and made some basic 3D objects then they were guided to design a more complex model.`,
+      date: "September 2020",
+      mainImgURL: "SS2020/SS2020-2.webp",
+      imgsURL: [
+        "SS2020/SS2020-1.webp",
+        "SS2020/SS2020-2.webp",
+        "SS2020/SS2020-3.webp",
+        "SS2020/SS2020-4.webp",
+        "SS2020/SS2020-5.webp",
+        "SS2020/SS2020-6.webp",
+        "SS2020/SS2020-7.webp",
+        "SS2020/SS2020-8.webp",
+        
+      ],
+    },
+    {
       id: 4,
       title: "Arduino",
       type: "workshop",
+      miniDescription: "Open source hardware and software that’s accessible and easy to learn.",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "during our level1 arduino workshops we train our members on programming and using the arduino board in order to run the sensors and the motors that form the robot.",
       date: "January 2018",
       mainImgURL: "ARDUINO2019/ARDUINO2019-1.webp",
       imgsURL: [
@@ -137,8 +166,9 @@ export default {
       id: 8,
       title: "NLP",
       type: "workshop",
+      miniDescription: "Neuro-Linguistic Programming ",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "Neuro-linguistic programming is a psychological approach that involves analyzing strategies used by successful individuals and applying them to reach a personal goal. It relates thoughts, language, and patterns of behavior learned through experience to specific outcomes.",
       date: "January 2018",
       mainImgURL: "NLP2018/NLP2018-1.webp",
       imgsURL: ["NLP2018/NLP2018-1.webp", "NLP2018/NLP2018-2.webp"],
@@ -147,8 +177,9 @@ export default {
       id: 9,
       title: "Raspberry Pi",
       type: "workshop",
+      miniDescription: "Combined python/ raspberry pi training session ",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        " raspberry pi is a single board computer used for many purposes but most importantly for IoT use.",
       date: "January 2018",
       mainImgURL: "RASPBERRY2019/RASPBERRY2019-1.webp",
       imgsURL: [
@@ -163,8 +194,9 @@ export default {
       id: 10,
       title: "STM",
       type: "workshop",
+      miniDescription:"High-performance microcontrollers",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "",
       date: "January 2018",
       mainImgURL: "STM2020/STM2020-1.webp",
       imgsURL: [
@@ -180,8 +212,9 @@ export default {
       id: 11,
       title: "Solidworks",
       type: "workshop",
+      miniDescription: "Computer Assisted Design software",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "Solidworks enables its users to build a 3D design for their product.",
       date: "January 2018",
       mainImgURL: "SOLID2019/SOLID2019-1.webp",
       imgsURL: [
@@ -196,8 +229,9 @@ export default {
       id: 12,
       title: "Drone",
       type: "workshop",
+      miniDescription: "unmanned aerial vehicle (UAV)",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "",
       date: "January 2018",
       mainImgURL: "DRONE2020/DRONE2020-1.webp",
       imgsURL: [
@@ -215,8 +249,9 @@ export default {
       id: 6,
       title: "Neghlbouh",
       type: "project",
+      miniDescription: "Smart tracking gadget",
       description:
-        "“Neghlbouh” is a project that can help our country in his fight against “Covid-19” Virus. This project is a mobile application with a containment bracelet. The mobile application helps in avoiding the horizontal transmission by informing people about the crowded places and stores people movements to facilitate the targeted test. The bracelet is dedicated for people who are obliged to respect the quarantine. This project is with collaboration with IEEE CS INSAT SBC and IEEE IAS INSAT SBC.",
+        "Neghlbouh is a project elaborated by IEEE RAS INSAT SBC and IEEE CS INSAT SBC members in collaboration with IEEE IAS INSAT SBC during the lockdown and that aims to keep the suspect cases at home in order to prevent the virus from spreading and to protect the others.",
       date: "Mars 2020",
       mainImgURL: "NEGHLBOUH/NEGHLBOUH.webp",
       imgsURL: [],
@@ -228,8 +263,9 @@ export default {
       id: 12,
       title: "Sidi Daoued Youth Center",
       type: "workshop",
+      miniDescription: "Robotics training sessions for youth under 18 years old",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "In IEEE RAS INSAT SBC we believe that we should spread our knowledge and our modest expertise with the others. In this context, we aim for the younger generations and we try to instill in them the love of tech and robotics. During these training sessions, they learn some coding, arduino and electronics basics and we guide them to make their robots.",
       date: "January 2018",
       mainImgURL: "SDYC/SDYC-1.webp",
       imgsURL: [
@@ -243,8 +279,9 @@ export default {
       id: 12,
       title: "Denden Youth Center",
       type: "workshop",
+      miniDescription: "Robotics training sessions for youth under 18 years old",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "In IEEE RAS INSAT SBC we believe that we should spread our knowledge and our modest expertise with the others. In this context, we aim for the younger generations and we try to instill in them the love of tech and robotics. During these training sessions, they learn some coding, arduino and electronics basics and we guide them to make their robots.",
       date: "January 2018",
       mainImgURL: "DYC/DYC-1.webp",
       imgsURL: ["DYC/DYC-1.webp", "DYC/DYC-2.webp"],
@@ -255,10 +292,11 @@ export default {
       id: 13,
       title: "NRW 2.0",
       type: "workshop",
+      miniDescription: "National Robotics Weekend : the first tunisian robotics congress",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        " NRW is IEEE RAS INSAT SBC’s final axis. It is an annual congress organized by our members. The participants get to attend quality soft and technical workshops, conferences and forums and to participate in challenges. Occasions like these are a golden opportunity to extend your network and to get acquainted to new people from your domain. The second edition took place in Kantaoui center hotel and welcomed participants from INSAT.",
       date: "January 2018",
-      mainImgURL: "NRW2.0/NRW2.0-1.webp",
+      mainImgURL: "NRW2.0/NRW2.0-7.webp",
       imgsURL: [
         "NRW2.0/NRW2.0-1.webp",
         "NRW2.0/NRW2.0-2.webp",
@@ -279,8 +317,9 @@ export default {
       id: 14,
       title: "NRW 3.0",
       type: "workshop",
+      miniDescription: "National Robotics Weekend : the first tunisian robotics congress",
       description:
-        "For instance last year we have participated in ULT Robots 3.0 and we won the first prize in the competition of HIT THE ROAD.",
+        "Unfortunately and due to the sanitary crisis the third NRW edition was cancelled, yet that won’t stop us from trying to provide our members and guests with other versions of the congress where they enjoy the amazing NRW experience all with taking the sanitary precautions into consideration.",
       date: "January 2018",
       mainImgURL: "SPACEEXPO2018/SPACEEXPO2018-6.webp",
       imgsURL: [
