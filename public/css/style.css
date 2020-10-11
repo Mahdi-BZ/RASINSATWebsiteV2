@@ -425,6 +425,28 @@ body a:hover {
   font-family: "Open Sans", sans-serif;
 }
 
+.about-us .excom-word {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../imgs/excom.webp");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.about-us .excom-word::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.about-us .excom-word p {
+  text-align: justify;
+  float: right;
+  width: 50%;
+  white-space: pre-line;
+}
+
 .custom-header span {
   position: relative;
 }

@@ -4,7 +4,7 @@ export default {
       id: 5,
       title: "FST Robots 2020",
       type: "competition",
-      miniDescription: "fst robots is a competition organized by IEEE RAS FST SBC",
+      miniDescription: "Fst robots is a competition organized by IEEE RAS FST SBC",
       description: "Eager to learn more and to develop their skills, our robotics enthusiasts never skip the opportunity to participate in competitions. FST robots is no exception, our chapter partcipated with 4 line-follower robots and we were ranked 3rd and 4th.",
       date: "February 2020",
       mainImgURL: "FST2020/FST2020-1.webp",
@@ -154,7 +154,7 @@ export default {
       type: "workshop",
       miniDescription: "Open source hardware and software that’s accessible and easy to learn.",
       description:
-        "during our level1 arduino workshops we train our members on programming and using the arduino board in order to run the sensors and the motors that form the robot.",
+        "During our level1 arduino workshops we train our members on programming and using the arduino board in order to run the sensors and the motors that form the robot.",
       date: "January 2018",
       mainImgURL: "ARDUINO2019/ARDUINO2019-1.webp",
       imgsURL: [
@@ -182,7 +182,7 @@ export default {
       type: "workshop",
       miniDescription: "Combined python/ raspberry pi training session ",
       description:
-        " raspberry pi is a single board computer used for many purposes but most importantly for IoT use.",
+        " Raspberry pi is a single board computer used for many purposes but most importantly for IoT use.",
       date: "January 2018",
       mainImgURL: "RASPBERRY2019/RASPBERRY2019-1.webp",
       imgsURL: [
@@ -232,7 +232,7 @@ export default {
       id: 12,
       title: "Drone",
       type: "workshop",
-      miniDescription: "unmanned aerial vehicle (UAV)",
+      miniDescription: "Unmanned aerial vehicle (UAV)",
       description:
         "",
       date: "January 2018",

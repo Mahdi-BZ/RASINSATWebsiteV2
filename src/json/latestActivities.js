@@ -11,8 +11,9 @@ export default [
 
   -Solidworks: The attendees discovered the software’s features and tools and made some basic 3D objects then they were guided to design a more complex model.`,
     date: "September 2020",
-    mainImgURL: "SS2020/SS2020-2.webp",
+    mainImgURL: "SS2020/SS2020-9.webp",
     imgsURL: [
+      "SS2020/SS2020-9.webp",
       "SS2020/SS2020-1.webp",
       "SS2020/SS2020-2.webp",
       "SS2020/SS2020-3.webp",
