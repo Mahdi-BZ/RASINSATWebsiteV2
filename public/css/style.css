@@ -476,6 +476,14 @@ body a:hover {
   background-color: #d0674d;
 }
 
+.about-us .team .icon {
+  color: #fff !important;
+}
+
+.about-us .team .icon:hover {
+  color: #d0674d !important;
+}
+
 .bounce-1 {
   visibility: visible;
   animation: bouncein-1 0.7s ease-in-out;
@@ -1124,17 +1132,13 @@ body a:hover {
   margin-bottom: 60px;
 }
 
-.underconstruction {
+.not-found {
   height: 600px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.underconstruction h2 {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  text-align: center;
-}
 
 /*        PROJECTS         */
 

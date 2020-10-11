@@ -1,54 +1,9 @@
 import React from "react";
 import { Bounce, Fade } from "react-awesome-reveal";
+import teamMembers from "../json/teammembers";
 
 const AboutUs = () => {
-  const teamMembers = [
-    {
-      name: "Ilef Mghirbi",
-      jobDescription: "Vice Chairwoman",
-      imgURL: "Ilef.png",
-    },
-    {
-      name: "Imed Ben Slimene",
-      jobDescription: "Training Manager",
-      imgURL: "Imed.png",
-    },
-    {
-      name: "Yassine Chamkhi",
-      jobDescription: "Media / Communication Manager",
-      imgURL: "Yassine.png",
-    },
-    {
-      name: "Achraf Trabelsi",
-      jobDescription: "Treasurer & Sponsoring Manager",
-      imgURL: "Achraf.png",
-    },
-    {
-      name: "Zeineb Bennour",
-      jobDescription: "General Secretary",
-      imgURL: "Zeineb.png",
-    },
-    {
-      name: "Mouna Khiari",
-      jobDescription: "Human Resources Manager",
-      imgURL: "Mouna.png",
-    },
-    {
-      name: "Mahdi Ben Zinouba",
-      jobDescription: "Webmaster",
-      imgURL: "Mahdi.png",
-    },
-    {
-      name: "Aziz Saidane",
-      jobDescription: "Logistics Manager",
-      imgURL: "Aziz.png",
-    },
-    {
-      name: "Amine Feki",
-      jobDescription: "Chairman",
-      imgURL: "Feki.png",
-    },
-  ];
+  
 
   const renderedTeam = teamMembers.map((member, index) => {
     return (
@@ -63,6 +18,22 @@ const AboutUs = () => {
         <Bounce className="text" triggerOnce={true}>
           <h6>{member.name}</h6>
           <p>{member.jobDescription}</p>
+          <div className="ui horizontal list">
+            <a
+            href="google.com"
+            target="blank"
+            className="item"
+            >
+              <i className="large facebook icon"/>
+            </a>
+            <a
+            href="google.com"
+            target="blank"
+            className="item"
+            >
+              <i className="large linkedin icon"/>
+            </a>
+          </div>
         </Bounce>
       </div>
     );

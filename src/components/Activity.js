@@ -41,7 +41,7 @@ const Activity = () => {
         />
         <p className="description">{act.description}</p>
 
-        <h4 className="sub-header">{act.imgsURL.length != 0 ? "Photos" : ""}</h4>
+        <h4 className="sub-header">{act.imgsURL.length !== 0 ? "Photos" : ""}</h4>
         <div className="ui two column stackable grid">{renderedImgs}</div>
       </div>
     </div>
