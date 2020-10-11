@@ -444,7 +444,6 @@ body a:hover {
   text-align: justify;
   float: right;
   width: 50%;
-  white-space: pre-line;
 }
 
 .custom-header span {

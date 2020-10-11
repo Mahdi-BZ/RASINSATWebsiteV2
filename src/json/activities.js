@@ -14,6 +14,10 @@ export default {
         "FST2020/FST2020-3.webp",
         "FST2020/FST2020-4.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1822748061193510",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
     {
       id: 0,
@@ -33,6 +37,10 @@ export default {
         "ULT2019/ULT2019-7.webp",
         "ULT2019/ULT2019-8.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1752694224865561",
+        instagram: "https://www.instagram.com/p/B7d3KONHxCq/"
+      },
     },
 
     {
@@ -56,6 +64,10 @@ export default {
         "TR2019/TR2019-9.webp",
         "TR2019/TR2019-10.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/INSAT.RAS",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
 
     {
@@ -64,7 +76,7 @@ export default {
       type: "competition",
       miniDescription: "Participation in ENSI ROBOCUP organized annually by “Association robotique ENSI”",
       description: "It is with joy that we participate each year in the robocup competition, the organization and the exciting atmosphere of robocup ENSI never fail to amaze us. For this edition, our 6 teams prepared 5 line-follower robots and one guided robot. Our efforts weren’t fruitless as we were awarded the first place in the spacelab competition.",
-      date: "February 2020",
+      date: "October 2019",
       mainImgURL: "ENSI2019/ENSI2019-1.webp",
       imgsURL: [
         "ENSI2019/ENSI2019-1.webp",
@@ -78,6 +90,10 @@ export default {
         "ENSI2019/ENSI2019-9.webp",
         "ENSI2019/ENSI2019-10.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1694573540677630",
+        instagram: "https://www.instagram.com/p/B7dvx_cnhlk/"
+      },
     },
     {
       id: 7,
@@ -95,6 +111,31 @@ export default {
         "ENIM2018/ENIM2018-3.webp",
 
       ],
+      links: {
+        facebook : "https://www.facebook.com/INSAT.RAS",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
+    },
+    {
+      id: 7,
+      title: "ENICAR 24H Innovation Challenge",
+      type: "competition",
+      miniDescription:
+        "Competition organized by “club robotique ENIM”",
+      description:"",
+      date: "January 2020",
+      mainImgURL: "ENICAR2020/ENICAR2020-2.webp",
+      imgsURL: [
+        "ENICAR2020/ENICAR2020-1.webp",
+        "ENICAR2020/ENICAR2020-2.webp",
+        "ENICAR2020/ENICAR2020-3.webp",
+        "ENICAR2020/ENICAR2020-4.webp",
+
+      ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1808874305914219",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
   ],
 
@@ -124,6 +165,10 @@ export default {
         "SS2020/SS2020-8.webp",
         
       ],
+      links: {
+        facebook : "https://www.facebook.com/INSAT.RAS/photos/a.867735573361435/2059808954154085/",
+        instagram: "https://www.instagram.com/p/CF2kGhyntUp/"
+      },
     },
     {
       id: 3,
@@ -144,6 +189,10 @@ export default {
         "IEEEDAY2019/IEEEDAY2019-7.webp",
         "IEEEDAY2019/IEEEDAY2019-8.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/watch/?v=2265294353577293",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
   ],
 
@@ -155,7 +204,7 @@ export default {
       miniDescription: "Open source hardware and software that’s accessible and easy to learn.",
       description:
         "During our level1 arduino workshops we train our members on programming and using the arduino board in order to run the sensors and the motors that form the robot.",
-      date: "January 2018",
+      date: "October 2019",
       mainImgURL: "ARDUINO2019/ARDUINO2019-1.webp",
       imgsURL: [
         "ARDUINO2019/ARDUINO2019-1.webp",
@@ -164,6 +213,10 @@ export default {
         "ARDUINO2019/ARDUINO2019-4.webp",
         "ARDUINO2019/ARDUINO2019-5.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1688484834619834",
+        instagram: "https://www.instagram.com/p/B7duS7xnPHS/"
+      },
     },
     {
       id: 8,
@@ -172,9 +225,13 @@ export default {
       miniDescription: "Neuro-Linguistic Programming ",
       description:
         "Neuro-linguistic programming is a psychological approach that involves analyzing strategies used by successful individuals and applying them to reach a personal goal. It relates thoughts, language, and patterns of behavior learned through experience to specific outcomes.",
-      date: "January 2018",
+      date: "April 2019",
       mainImgURL: "NLP2018/NLP2018-1.webp",
       imgsURL: ["NLP2018/NLP2018-1.webp", "NLP2018/NLP2018-2.webp"],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1544521835682802",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
     {
       id: 9,
@@ -183,7 +240,7 @@ export default {
       miniDescription: "Combined python/ raspberry pi training session ",
       description:
         " Raspberry pi is a single board computer used for many purposes but most importantly for IoT use.",
-      date: "January 2018",
+      date: "February 2020",
       mainImgURL: "RASPBERRY2019/RASPBERRY2019-1.webp",
       imgsURL: [
         "RASPBERRY2019/RASPBERRY2019-1.webp",
@@ -192,6 +249,10 @@ export default {
         "RASPBERRY2019/RASPBERRY2019-4.webp",
         "RASPBERRY2019/RASPBERRY2019-5.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1836490313152618",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
     {
       id: 10,
@@ -200,7 +261,7 @@ export default {
       miniDescription:"High-performance microcontrollers",
       description:
         "",
-      date: "January 2018",
+      date: "November 2019",
       mainImgURL: "STM2020/STM2020-1.webp",
       imgsURL: [
         "STM2020/STM2020-1.webp",
@@ -210,6 +271,10 @@ export default {
         "STM2020/STM2020-5.webp",
         "STM2020/STM2020-6.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1739666509501666",
+        instagram: "https://www.instagram.com/p/B7d0PeNHXxx/"
+      },
     },
     {
       id: 11,
@@ -218,7 +283,7 @@ export default {
       miniDescription: "Computer Assisted Design software",
       description:
         "Solidworks enables its users to build a 3D design for their product.",
-      date: "January 2018",
+      date: "November 2019",
       mainImgURL: "SOLID2019/SOLID2019-1.webp",
       imgsURL: [
         "SOLID2019/SOLID2019-1.webp",
@@ -227,6 +292,10 @@ export default {
         "SOLID2019/SOLID2019-4.webp",
         "SOLID2019/SOLID2019-5.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1746579252143725",
+        instagram: "https://www.instagram.com/p/B7eBbWGH9yE/"
+      },
     },
     {
       id: 12,
@@ -235,7 +304,7 @@ export default {
       miniDescription: "Unmanned aerial vehicle (UAV)",
       description:
         "",
-      date: "January 2018",
+      date: "February 2020",
       mainImgURL: "DRONE2020/DRONE2020-1.webp",
       imgsURL: [
         "DRONE2020/DRONE2020-1.webp",
@@ -244,6 +313,10 @@ export default {
         "DRONE2020/DRONE2020-4.webp",
         "DRONE2020/DRONE2020-5.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1815326548602328",
+        instagram: "https://www.instagram.com/p/B8HjyxRHeU2/"
+      },
     },
   ],
 
@@ -258,6 +331,10 @@ export default {
       date: "Mars 2020",
       mainImgURL: "NEGHLBOUH/NEGHLBOUH.webp",
       imgsURL: [],
+      links: {
+        facebook : "https://www.facebook.com/Neghlbouh",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
   ],
 
@@ -269,7 +346,7 @@ export default {
       miniDescription: "Robotics training sessions for youth under 18 years old",
       description:
         "In IEEE RAS INSAT SBC we believe that we should spread our knowledge and our modest expertise with the others. In this context, we aim for the younger generations and we try to instill in them the love of tech and robotics. During these training sessions, they learn some coding, arduino and electronics basics and we guide them to make their robots.",
-      date: "January 2018",
+      date: "March 2019",
       mainImgURL: "SDYC/SDYC-1.webp",
       imgsURL: [
         "SDYC/SDYC-1.webp",
@@ -277,6 +354,10 @@ export default {
         "SDYC/SDYC-3.webp",
         "SDYC/SDYC-4.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1520587144742938",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
     {
       id: 12,
@@ -285,9 +366,13 @@ export default {
       miniDescription: "Robotics training sessions for youth under 18 years old",
       description:
         "In IEEE RAS INSAT SBC we believe that we should spread our knowledge and our modest expertise with the others. In this context, we aim for the younger generations and we try to instill in them the love of tech and robotics. During these training sessions, they learn some coding, arduino and electronics basics and we guide them to make their robots.",
-      date: "January 2018",
+      date: "January 2020",
       mainImgURL: "DYC/DYC-1.webp",
       imgsURL: ["DYC/DYC-1.webp", "DYC/DYC-2.webp"],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=INSAT.RAS&set=a.1803173273150989",
+        instagram: "https://www.instagram.com/ieee_ras_insat/"
+      },
     },
   ],
   nrw: [
@@ -298,7 +383,7 @@ export default {
       miniDescription: "National Robotics Weekend : the first tunisian robotics congress",
       description:
         " NRW is IEEE RAS INSAT SBC’s final axis. It is an annual congress organized by our members. The participants get to attend quality soft and technical workshops, conferences and forums and to participate in challenges. Occasions like these are a golden opportunity to extend your network and to get acquainted to new people from your domain. The second edition took place in Kantaoui center hotel and welcomed participants from INSAT.",
-      date: "January 2018",
+      date: "March 2019",
       mainImgURL: "NRW2.0/NRW2.0-7.webp",
       imgsURL: [
         "NRW2.0/NRW2.0-1.webp",
@@ -315,6 +400,10 @@ export default {
         "NRW2.0/NRW2.0-12.webp",
         "NRW2.0/NRW2.0-13.webp",
       ],
+      links: {
+        facebook : "https://www.facebook.com/NationalRoboticsWeekend",
+        instagram: "https://www.instagram.com/p/Bvm8o7QAleu/"
+      },
     },
     {
       id: 14,
@@ -323,7 +412,7 @@ export default {
       miniDescription: "National Robotics Weekend : the first tunisian robotics congress",
       description:
         "Unfortunately and due to the sanitary crisis the third NRW edition was cancelled, yet that won’t stop us from trying to provide our members and guests with other versions of the congress where they enjoy the amazing NRW experience all with taking the sanitary precautions into consideration.",
-      date: "January 2018",
+      date: "Postponed due to covid-19",
       mainImgURL: "NRW3.0/NRW3.0-1.webp",
       imgsURL: [
         "NRW3.0/NRW3.0-1.webp",
@@ -334,6 +423,10 @@ export default {
         "NRW3.0/NRW3.0-6.webp",
        
       ],
+      links: {
+        facebook : "https://www.facebook.com/media/set/?vanity=NationalRoboticsWeekend&set=a.603016030551732",
+        instagram: "https://www.instagram.com/p/B84XL0KHfgF/"
+      },
     },
   ],
 };

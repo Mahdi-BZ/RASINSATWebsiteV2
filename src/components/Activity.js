@@ -27,13 +27,10 @@ const Activity = () => {
         <h2 className="header">{act.title}</h2>
         <p className="date">{act.date}</p>
         <div className="ui horizontal list">
-          <a href="google.com" target="blank" className="item">
+          <a href={act.links.facebook} target="blank" className="item">
             <i className="large facebook f icon"></i>
           </a>
-          <a href="google.com" target="blank" className="item">
-            <i className="large twitter icon"></i>
-          </a>
-          <a href="google.com" target="blank" className="item">
+          <a href={act.links.instagram} target="blank" className="item">
             <i className="large instagram icon"></i>
           </a>
         </div>
@@ -44,7 +41,7 @@ const Activity = () => {
         />
         <p className="description">{act.description}</p>
 
-        <h4 className="sub-header">Photos</h4>
+        <h4 className="sub-header">{act.imgsURL.length != 0 ? "Photos" : ""}</h4>
         <div className="ui two column stackable grid">{renderedImgs}</div>
       </div>
     </div>

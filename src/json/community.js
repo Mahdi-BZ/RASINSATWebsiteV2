@@ -30,7 +30,6 @@ export default [
     description:
       "One of the best things about RAS chapter is the connection we have with our members. Here are some pictures that translate the amazing atmosphere we have as a chapter.",
     imgs: [
-      "familyGallery/family1.webp",
       "familyGallery/family2.webp",
       "familyGallery/family3.webp",
       "familyGallery/family4.webp",
