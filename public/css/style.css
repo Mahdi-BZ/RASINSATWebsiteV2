@@ -426,6 +426,7 @@ body a:hover {
 }
 
 .about-us .excom-word {
+  position: relative;
   padding-top: 50px;
   padding-bottom: 90px;
   font-family: "Open Sans", sans-serif;
@@ -434,18 +435,50 @@ body a:hover {
   background-position: left top;
 }
 
-.about-us .excom-word::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .about-us .excom-word p {
   text-align: justify;
   float: right;
   width: 49%;
   font-size: 18px;
 }
+
+@media (max-width: 800px) {
+  .about-us .excom-word {
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+  }
+
+  .about-us .excom-word .container {
+    position: relative;
+    z-index: 10;
+  }
+
+  .about-us .excom-word::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    background: rgba(255, 255, 255, 0.65);
+  }
+
+  .about-us .excom-word p {
+    float: none;
+    width: 100%;
+  }
+
+}
+
+.about-us .excom-word::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 .custom-header span {
   position: relative;

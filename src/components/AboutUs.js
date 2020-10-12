@@ -145,7 +145,7 @@ const AboutUs = () => {
       </div>
       <div className="excom-word">
         <div className="container ">
-          <h2 className="section-header">Excom's Word</h2>
+          <h2 className="section-header">Chairman's Word</h2>
           <p>In IEEE RAS INSAT SBC chapter we aim to share our knowledge and expertise with our members.<br/> Our goal is to create a cohesive community fond of robotics, that’s able to share its proficiency and leave its footprint in this field. This was my childhood dream and by joining IEEE RAS INSAT SBC, I knew since the first days that I was in the right place and took my first steps to make my dream come true. 
 <br/>When joining IEEE RAS chapter, you will have the opportunity to practice your technical skills and to implement your ideas into realistic projects.
 </p>
@@ -156,104 +156,7 @@ const AboutUs = () => {
           <h2 className="section-header">Our Team</h2>
           <div className="ui two column stackable centered grid">
             {renderedTeam}
-            {/*
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember2"
-                data-anim="bounce-2"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember3"
-                data-anim="bounce-1"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            <div className="column">
-              <img
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                className="hidden"
-                alt="teamMember4"
-                data-anim="bounce-2"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember5"
-                data-anim="bounce-1"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember6"
-                data-anim="bounce-2"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember7"
-                data-anim="bounce-1"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember8"
-                data-anim="bounce-2"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            <div className="column">
-              <img
-                className="hidden"
-                src={`${process.env.PUBLIC_URL}/imgs/team/photo.png`}
-                alt="teamMember8"
-                data-anim="bounce-1"
-              />
-              <div className="text hidden">
-                <h6>Mahdi Ben Zinouba</h6>
-                <p>WEBMASTER</p>
-              </div>
-            </div>
-            */}
+             
           </div>
         </div>
       </div>
