@@ -9,7 +9,7 @@ const imgs = [
   {
     date: 2020,
     name: "Innovation Challenge 24H Enicarthage",
-    imgURL: "AWARD2012-1.webp",
+    imgURL: "AWARD2020-1.webp",
   },
   {
     date: 2019,
