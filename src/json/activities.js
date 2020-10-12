@@ -117,7 +117,7 @@ export default {
       },
     },
     {
-      id: 7,
+      id: 16,
       title: "ENICAR 24H Innovation Challenge",
       type: "competition",
       miniDescription:
@@ -360,7 +360,7 @@ export default {
       },
     },
     {
-      id: 12,
+      id: 17,
       title: "Denden Youth Center",
       type: "workshop",
       miniDescription: "Robotics training sessions for youth under 18 years old",
