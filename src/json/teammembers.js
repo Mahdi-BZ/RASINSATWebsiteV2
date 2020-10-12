@@ -4,8 +4,8 @@ export default  [
       jobDescription: "Vice Chairwoman",
       imgURL: "Ilef.png",
       links: {
-        facebook: "",
-        linkedin: ""
+        facebook: "https://www.facebook.com/ilef.mghirbi",
+        linkedin: "https://www.linkedin.com/in/ilef-mghirbi"
       }
     },
     {
@@ -13,8 +13,8 @@ export default  [
       jobDescription: "Training Manager",
       imgURL: "Imed.png",
       links: {
-        facebook: "",
-        linkedin: ""
+        facebook: "https://www.facebook.com/imed.eddine21",
+        linkedin: "https://www.linkedin.com/in/imed-eddine-ben-slimene-53777917a"
       }
     },
     {
@@ -22,8 +22,8 @@ export default  [
       jobDescription: "Media / Communication Manager",
       imgURL: "Yassine.png",
       links: {
-        facebook: "",
-        linkedin: ""
+        facebook: "https://www.facebook.com/Yassine.Chamkhi99",
+        linkedin: "https://www.linkedin.com/in/yassinechamkhi"
       }
     },
     {
@@ -31,7 +31,7 @@ export default  [
       jobDescription: "Treasurer & Sponsoring Manager",
       imgURL: "Achraf.png",
       links: {
-        facebook: "",
+        facebook: "https://www.facebook.com/achraf.trabelsi.100",
         linkedin: ""
       }
     },
@@ -40,7 +40,7 @@ export default  [
       jobDescription: "General Secretary",
       imgURL: "Zeineb.png",
       links: {
-        facebook: "",
+        facebook: "https://www.facebook.com/zeineb.bennour.7",
         linkedin: ""
       }
     },
@@ -49,8 +49,8 @@ export default  [
       jobDescription: "Human Resources Manager",
       imgURL: "Mouna.png",
       links: {
-        facebook: "",
-        linkedin: ""
+        facebook: "https://www.facebook.com/mouna.khiari.54",
+        linkedin: "https://www.linkedin.com/in/mouna-khiari-89b6041b5"
       }
     },
     {
@@ -58,8 +58,8 @@ export default  [
       jobDescription: "Webmaster",
       imgURL: "Mahdi.png",
       links: {
-        facebook: "",
-        linkedin: ""
+        facebook: "https://www.facebook.com/mahdi.benzinouba",
+        linkedin: "https://www.linkedin.com/in/mahdibenz"
       }
     },
     {
@@ -67,8 +67,8 @@ export default  [
       jobDescription: "Logistics Manager",
       imgURL: "Aziz.png",
       links: {
-        facebook: "",
-        linkedin: ""
+        facebook: "https://www.facebook.com/aziz.saidane",
+        linkedin: "https://www.linkedin.com/in/saidane-aziz-9b30111a2"
       }
     },
     {
@@ -76,8 +76,8 @@ export default  [
       jobDescription: "Chairman",
       imgURL: "Feki.png",
       links: {
-        facebook: "",
-        linkedin: ""
+        facebook: "https://www.facebook.com/amine.feki.94",
+        linkedin: "https://www.linkedin.com/in/amine-feki"
       }
     },
   ];

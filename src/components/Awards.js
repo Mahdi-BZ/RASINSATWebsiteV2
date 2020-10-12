@@ -7,19 +7,29 @@ import "react-vertical-timeline-component/style.min.css";
 
 const imgs = [
   {
+    date: 2020,
+    name: "Innovation Challenge 24H Enicarthage",
+    imgURL: "AWARD2012-1.webp",
+  },
+  {
+    date: 2019,
+    name: "Student Branch Chapter of the Year",
+    imgURL: "AWARD2019-1.webp",
+  },
+  {
     date: 2018,
     name: "Outstanding Student Chapter in Tunisia",
-    imgURL: "Award2018-1.webp",
+    imgURL: "AWARD2018-1.webp",
   },
   {
     date: 2018,
     name: "Runner-UP EASC Acceleration Program 2018 with NRW",
-    imgURL: "Award2018-2.webp",
+    imgURL: "AWARD2018-2.webp",
   },
   {
     date: 2017,
     name: "Best RAS Student Chapter Award",
-    imgURL: "Award2017-1.webp",
+    imgURL: "AWARD2017-1.webp",
   },
 ];
 
@@ -41,7 +51,7 @@ const Awards = () => {
         <img
           alt={value.name}
           className="award-img"
-          src={`${process.env.PUBLIC_URL}/imgs/${value.imgURL}`}
+          src={`${process.env.PUBLIC_URL}/imgs/awards/${value.imgURL}`}
         />
       </VerticalTimelineElement>
     );

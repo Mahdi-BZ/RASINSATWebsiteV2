@@ -121,8 +121,8 @@ export default {
       title: "ENICAR 24H Innovation Challenge",
       type: "competition",
       miniDescription:
-        "Competition organized by “club robotique ENIM”",
-      description:"",
+        "“ Innovation challenge ” is a robotics 24h-challenge organized by “ Club Mécatronique ENICarthage ”",
+      description:"EEE RAS INSAT has participated in this challenge with 2 teams. Our mission was to deal with the ESP32 microcontroller and master its functionalities. As usual, we have rocked it and won the first prize.",
       date: "January 2020",
       mainImgURL: "ENICAR2020/ENICAR2020-2.webp",
       imgsURL: [

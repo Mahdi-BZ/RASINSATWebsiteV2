@@ -389,7 +389,7 @@ body a:hover {
   color: #000;
 
   font-family: "Open Sans", sans-serif;
-  background-image: url("../imgs/world-map.jpg");
+  background-image: url("../imgs/world-map.webp");
   background-repeat: no-repeat;
   background-position: top center;
   /*background-size: cover;*/
@@ -413,7 +413,7 @@ body a:hover {
   padding-bottom: 90px;
   color: #000;
 
-  background-image: url("../imgs/tn2.jpg");
+  background-image: url("../imgs/tn2.webp");
   background-repeat: no-repeat;
   background-position: center center;
   /*background-size: cover;*/
@@ -443,7 +443,8 @@ body a:hover {
 .about-us .excom-word p {
   text-align: justify;
   float: right;
-  width: 50%;
+  width: 49%;
+  font-size: 18px;
 }
 
 .custom-header span {
@@ -557,6 +558,10 @@ body a:hover {
 }
 
 .about-us .team .grid .column:last-child {
+  margin-right: -80px;
+}
+
+.about-us .team .grid .column:last-child img {
   margin-right: -80px;
 }
 

@@ -20,14 +20,14 @@ const AboutUs = () => {
           <p>{member.jobDescription}</p>
           <div className="ui horizontal list">
             <a
-            href="google.com"
+            href={member.links.facebook}
             target="blank"
             className="item"
             >
               <i className="large facebook icon"/>
             </a>
             <a
-            href="google.com"
+            href={member.links.linkedin}
             target="blank"
             className="item"
             >
@@ -146,15 +146,9 @@ const AboutUs = () => {
       <div className="excom-word">
         <div className="container ">
           <h2 className="section-header">Excom's Word</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor elementum lorem, porta aliquam tellus pellentesque ac. Integer facilisis interdum tellus, sit amet imperdiet leo accumsan quis.
-             Nullam a urna vehicula, iaculis risus tristique, pellentesque tellus. Nunc accumsan lorem ac odio pellentesque, lacinia sollicitudin velit posuere.
-             Curabitur auctor accumsan eros, vitae interdum neque hendrerit quis. Quisque dictum, diam a vestibulum suscipit, diam enim condimentum enim, quis congue turpis magna at libero. Curabitur egestas ac metus eget posuere.
-              Integer nec sem id lorem fermentum rutrum. Sed tellus mi, condimentum nec diam in, faucibus mollis libero.
-               Fusce erat massa, vulputate et orci sed, laoreet sollicitudin justo.
-               
-                Nulla facilisi. Proin elit lectus, laoreet ut elementum eget, pharetra at nisl. Curabitur porttitor auctor fringilla.
-
-Nunc eu mauris justo. Suspendisse dictum eget turpis non tristique. Sed ut nisl sit amet nulla sodales tempor. Integer consequat porttitor erat, ac rutrum sem hendrerit bibendum. Nunc posuere commodo lacus, et mattis justo varius at. Nunc in ex hendrerit, volutpat mi ut, viverra mi. Nunc sed velit ex. Sed at ex tincidunt, rhoncus felis imperdiet, maximus augue. Sed lobortis massa ac risus scelerisque, imperdiet pretium massa dapibus.</p>
+          <p>In IEEE RAS INSAT SBC chapter we aim to share our knowledge and expertise with our members.<br/> Our goal is to create a cohesive community fond of robotics, that’s able to share its proficiency and leave its footprint in this field. This was my childhood dream and by joining IEEE RAS INSAT SBC, I knew since the first days that I was in the right place and took my first steps to make my dream come true. 
+<br/>When joining IEEE RAS chapter, you will have the opportunity to practice your technical skills and to implement your ideas into realistic projects.
+</p>
         </div>
       </div>
       <div className="team">
