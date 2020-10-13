@@ -430,9 +430,13 @@ body a:hover {
   padding-top: 50px;
   padding-bottom: 90px;
   font-family: "Open Sans", sans-serif;
-  background-image: url("../imgs/excom.webp");
+  /*background-image: url("../imgs/chairmanWord.webp");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: center center;*/
+}
+
+.about-us .excom-word img {
+  margin-left: 150px;
 }
 
 .about-us .excom-word p {
@@ -444,14 +448,20 @@ body a:hover {
 
 @media (max-width: 700px) {
   .about-us .excom-word {
+    background-image: url("../imgs/chairmanWord.webp");
     background-position-x: center;
     background-position-y: center;
-    background-size: contain;
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
   }
 
   .about-us .excom-word .container {
     position: relative;
     z-index: 10;
+  }
+
+  .about-us .excom-word img {
+    display: none;
   }
 
   .about-us .excom-word::before {

@@ -146,6 +146,7 @@ const AboutUs = () => {
       <div className="excom-word">
         <div className="container ">
           <h2 className="section-header">Chairman's Word</h2>
+          <img alt="chairman's word" src={`${process.env.PUBLIC_URL}/imgs/chairmanWord.webp`}/>
           <p>In IEEE RAS INSAT SBC chapter we aim to share our knowledge and expertise with our members.<br/> Our goal is to create a cohesive community fond of robotics, that’s able to share its proficiency and leave its footprint in this field. This was my childhood dream and by joining IEEE RAS INSAT SBC, I knew since the first days that I was in the right place and took my first steps to make my dream come true. 
 <br/>When joining IEEE RAS chapter, you will have the opportunity to practice your technical skills and to implement your ideas into realistic projects.
 </p>
