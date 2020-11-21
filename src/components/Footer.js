@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="column">
               <h3>IEEE RAS</h3>
               <p>
-                when we talk about RAS we'll be talking about : Success,
-                hardwork dedication, awards, passion, sacrifice, teamwork, and
+                when we talk about RAS we'll be talking about: Success,
+                hardwork, dedication, awards, passion, sacrifice, teamwork and
                 endless love.
               </p>
             </div>

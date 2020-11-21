@@ -127,7 +127,7 @@ const Home = () => {
       <div className="sponsors">
         <div className="ui container">
           <h2 className="section-header">Our Sponsors</h2>
-          <div className="ui stackable five column grid">
+          <div className="ui stackable six column grid">
             <div className="column">
               <Fade direction="left" triggerOnce={true}>
                 <img
@@ -172,7 +172,17 @@ const Home = () => {
                   className=""
                 />
               </Fade>
+              </div>
+              <div className="column">
+              <Fade direction="right" triggerOnce={true}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/imgs/sponsors/AS2E.png`}
+                  alt="AS2E"
+                  className=""
+                />
+              </Fade>
             </div>
+            
           </div>
         </div>
       </div>
@@ -186,7 +196,7 @@ const Home = () => {
               className="required field "
               triggerOnce={true}
             >
-              <label>First Name :</label>
+              <label>First Name:</label>
               <input
                 type="text"
                 ref={register({
@@ -202,7 +212,7 @@ const Home = () => {
               className="required field "
               triggerOnce={true}
             >
-              <label>Last Name :</label>
+              <label>Last Name:</label>
               <input
                 type="text"
                 ref={register({
@@ -218,7 +228,7 @@ const Home = () => {
               className="required field "
               triggerOnce={true}
             >
-              <label>Email :</label>
+              <label>Email:</label>
               <input
                 type="email"
                 ref={register({
@@ -238,7 +248,7 @@ const Home = () => {
               className="required field "
               triggerOnce={true}
             >
-              <label>Subject :</label>
+              <label>Subject:</label>
               <input
                 type="text"
                 ref={register({
@@ -254,7 +264,7 @@ const Home = () => {
               className="required field "
               triggerOnce={true}
             >
-              <label>Message :</label>
+              <label>Message:</label>
               <textarea
                 name="message"
                 rows="5"

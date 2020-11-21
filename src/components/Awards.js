@@ -62,7 +62,7 @@ const Awards = () => {
       <div className="ui container">
         <h2 className="section-header">Awards</h2>
         <p className="section-sub-header">
-          Everybody loves awards, and we ,as IEEE INSAT RAS SBC, are no
+          Everybody loves awards, and we, as IEEE INSAT RAS SBC, are no
           exception!
           <br /> In recognition of our continuous efforts, we have received many
           awards. Here is a list of the most recent ones:

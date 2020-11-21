@@ -32,7 +32,7 @@ export default  [
       imgURL: "Achraf.png",
       links: {
         facebook: "https://www.facebook.com/achraf.trabelsi.100",
-        linkedin: ""
+        linkedin: "https://www.linkedin.com/in/achref-trabelsi-5231b61ba"
       }
     },
     {
