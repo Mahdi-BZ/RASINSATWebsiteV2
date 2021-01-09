@@ -33,6 +33,9 @@ const Footer = () => {
                 <Link to="/community" className="item">
                   Our Community
                 </Link>
+                <Link to="/shop" className="item">
+                  Shop
+                </Link>
               </div>
             </div>
             <div className="column">

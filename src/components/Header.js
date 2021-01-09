@@ -52,6 +52,9 @@ const Header = () => {
             <NavLink exact to="/community" className="item">
               Our Community
             </NavLink>
+            <NavLink exact to="/shop" className="item">
+              Shop
+            </NavLink>
           </div>
         </div>
       </div>

@@ -479,7 +479,6 @@ body a:hover {
     float: none;
     width: 100%;
   }
-
 }
 
 .about-us .excom-word::after {
@@ -487,8 +486,6 @@ body a:hover {
   display: table;
   clear: both;
 }
-
-
 
 .custom-header span {
   position: relative;
@@ -527,7 +524,6 @@ body a:hover {
 .about-us .team .icon:hover {
   color: #d0674d !important;
 }
-
 
 .about-us .team .text h6 {
   font-family: "Open Sans", sans-serif;
@@ -571,19 +567,15 @@ body a:hover {
   margin-right: -80px;
 }
 
-@media (max-width: 700px)
-{
+@media (max-width: 700px) {
   .about-us .team .grid .column:last-child {
     margin-right: 0px;
   }
-  
+
   .about-us .team .grid .column:last-child img {
     margin-right: 0px;
   }
 }
-
-
-
 
 /*        AWARDS         */
 .awards {
@@ -747,8 +739,6 @@ body a:hover {
   height: 100%;
 }
 
-
-
 .community-button {
   display: inline-block;
   padding: 10px 20px;
@@ -785,7 +775,6 @@ body a:hover {
   align-items: center;
   justify-content: center;
 }
-
 
 /*        PROJECTS         */
 
@@ -850,4 +839,22 @@ body a:hover {
     font-size: 12px;
     margin-top: 10px;
   }
+}
+
+/* SHOP */
+
+.shop {
+  padding-top: 140px;
+  padding-bottom: 50px;
+}
+
+.shop .price {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 15px;
+  color: #000;
 }
