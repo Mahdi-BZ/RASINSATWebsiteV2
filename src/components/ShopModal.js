@@ -37,12 +37,14 @@ const ShopModal = () => {
             from_name: fullname,
             sender_email: email,
             subject: "Buying item "+name,
-            message: "Quantity : "+quantity + "\n Size: "+size+"\n Phone Number : "+phoneNumber
+            phone_number: phoneNumber,
+            size: size,
+            quantity: quantity
         };
     
         const response = await emailjs.send(
             "service_u5jt4ss",
-            "template_tlzgpjy",
+            "template_qf67mir",
             templateParams,
             "user_q8e4FXE0st9dPWaw6e4l3"
         )
