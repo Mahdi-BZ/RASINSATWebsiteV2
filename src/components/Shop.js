@@ -1,12 +1,17 @@
 import React from "react";
 import cards from "../json/cards";
 
+import ShopModal from "./ShopModal"
+
+
+
+
 const Shop = () => {
   
 
   const displayCards = () => {
     return cards.map((c, i) => 
-    <div className="card">
+    <div className="card" key={i}>
       <div className="image">
         <img src="https://via.placeholder.com/150" alt=""/>
       </div>
@@ -20,7 +25,7 @@ const Shop = () => {
           <div className="price">
             {c.price}DT
           </div>
-          <button className="ui right floated primary button ">Buy</button>
+          <button id="shopModalButton" className="ui right floated primary button " data-toggle="modal" data-target="#shopModal" data-price={c.price} data-name={c.name}>Buy</button>
       </div>
     </div>
     )
@@ -36,6 +41,7 @@ const Shop = () => {
           {displayCards()}
         </div>
       </div>
+      <ShopModal />
     </div>
   );
 };
