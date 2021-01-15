@@ -37,7 +37,7 @@ const ShopModal = () => {
             from_name: fullname,
             sender_email: email,
             subject: "Buying item "+name,
-            message: "Quantity : "+quantity + "/n Size: "+size+"/n Phone Number : "+phoneNumber
+            message: "Quantity : "+quantity + "\n Size: "+size+"\n Phone Number : "+phoneNumber
         };
     
         const response = await emailjs.send(
