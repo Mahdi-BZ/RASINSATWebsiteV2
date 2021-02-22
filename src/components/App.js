@@ -13,6 +13,7 @@ import Activity from "./Activity";
 import NotFound from "./NotFound";
 import ScrollToTop from "./ScrollToTop";
 import Shop from "./Shop";
+import Newsletter from "./Newsletter";
 const App = () => {
   return (
     <Router history={history}>
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/community" exact component={Community} />
           <Route path="/activities/:type/:id" exact component={Activity} />
           <Route path="/shop" exact component={Shop} />
+          <Route path="/newsletter" exact component={Newsletter} />
           <Route path="*" exact component={NotFound} />
         </Switch>
         <Footer />

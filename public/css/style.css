@@ -6,6 +6,8 @@ body a:hover {
   text-decoration: none;
 }
 
+
+
 /* HEADER */
 
 .site-header {
@@ -857,4 +859,19 @@ body a:hover {
   font-weight: 500;
   font-size: 15px;
   color: #000;
+}
+
+.special-hover::before {
+  position: absolute;
+  visibility: hidden;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.special-hover:hover::before {
+  visibility: visible;
 }
