@@ -1,7 +1,10 @@
 import React from "react";
 import cards from "../json/cards";
 
-import ShopModal from "./ShopModal"
+import ShopModal from "./ShopModal";
+import InnerImageZoom from "react-inner-image-zoom";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 
 
@@ -12,8 +15,10 @@ const Shop = () => {
   const displayCards = () => {
     return cards.map((c, i) => 
     <div className="card" key={i}>
-      <div className="image">
-        <img src="https://via.placeholder.com/150" alt=""/>
+      <div className="image" style={{display:"flex", justifyContent:"center", alignItems: "center"}}>
+        <Zoom>
+          <img src={`${process.env.PUBLIC_URL}/imgs/shop/${c.imgURL}`} width="300px" height="300px" alt=""/>
+        </Zoom>
       </div>
       <div className="content">
         <span className="header">{c.name}</span>
