@@ -120,6 +120,24 @@ const Header = () => {
         >
           <span>Our Community</span>
         </NavLink>
+        <NavLink
+          exact
+          to="/shop"
+          onClick={() => {
+            setActive(false);
+          }}
+        >
+          <span>Shop</span>
+        </NavLink>
+        <NavLink
+          exact
+          to="/newsletter"
+          onClick={() => {
+            setActive(false);
+          }}
+        >
+          <span>Newsletter</span>
+        </NavLink>
       </div>
     </div>
   );
