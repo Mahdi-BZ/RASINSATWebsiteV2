@@ -36,6 +36,9 @@ const Footer = () => {
                 <Link to="/shop" className="item">
                   Shop
                 </Link>
+                <Link to="/newsletter" className="item">
+                  Newsletter
+                </Link>
               </div>
             </div>
             <div className="column">
