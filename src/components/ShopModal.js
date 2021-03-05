@@ -90,6 +90,7 @@ const ShopModal = () => {
                                     <option value="s">S</option>
                                     <option value="m">M</option>
                                     <option value="l">L</option>
+                                    <option value="xl">XL</option>
                                 </select>
                             </div>
                             <div className="form-group">
